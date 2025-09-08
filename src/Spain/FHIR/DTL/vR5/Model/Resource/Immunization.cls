@@ -174,7 +174,7 @@ Property subpotentReason As list Of HS.FHIR.DTL.vR4.Model.Datatype.CodeableConce
 /// any FHIR4 code may be used; 
 /// immunization-program-eligibility shows EXAMPLE codes, 
 /// but you may use codes from any ValueSet.
-Property programEligibility As list Of Spain.FHIR.DTL.vR5.Model.Element.programEligibility(XMLNAME = "programEligibility", XMLPROJECTION = "ELEMENT");
+Property programEligibility As list Of Spain.FHIR.DTL.vR5.Model.Element.Immunization.programEligibility(XMLNAME = "programEligibility", XMLPROJECTION = "ELEMENT");
 
 /// CodeableConcept
 /// <p>
@@ -193,7 +193,7 @@ Property reaction As list Of Spain.FHIR.DTL.vR5.Model.Element.reaction(XMLNAME =
 /// BackboneElement
 /// <p>
 /// Protocol followed by the provider.
-Property protocolApplied As list Of Spain.FHIR.DTL.vR5.Model.Element.protocolApplied(XMLNAME = "protocolApplied", XMLPROJECTION = "ELEMENT");
+Property protocolApplied As list Of Spain.FHIR.DTL.vR5.Model.Element.Immunization.protocolApplied(XMLNAME = "protocolApplied", XMLPROJECTION = "ELEMENT");
 
 Parameter ELEMENTQUALIFIED = 1;
 

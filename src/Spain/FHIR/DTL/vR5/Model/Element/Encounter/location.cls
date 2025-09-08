@@ -1,4 +1,4 @@
-Class Spain.FHIR.DTL.vR5.Model.Element.location Extends HS.FHIR.DTL.vR4.Model.Base.BackboneElement [ Not ProcedureBlock ]
+Class Spain.FHIR.DTL.vR5.Model.Element.Encounter.location Extends HS.FHIR.DTL.vR4.Model.Base.BackboneElement [ Not ProcedureBlock ]
 {
 
 /// Reference

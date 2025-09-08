@@ -1,5 +1,5 @@
 /// Protocol followed by the provider.
-Class Spain.FHIR.DTL.vR5.Model.Element.protocolApplied Extends HS.FHIR.DTL.vR4.Model.Base.BackboneElement [ Not ProcedureBlock ]
+Class Spain.FHIR.DTL.vR5.Model.Element.Immunization.protocolApplied Extends HS.FHIR.DTL.vR4.Model.Base.BackboneElement [ Not ProcedureBlock ]
 {
 
 /// string

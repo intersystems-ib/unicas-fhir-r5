@@ -1,4 +1,4 @@
-Class Spain.FHIR.DTL.vR5.Model.Element.programEligibility Extends HS.FHIR.DTL.vR4.Model.Base.BackboneElement [ Not ProcedureBlock ]
+Class Spain.FHIR.DTL.vR5.Model.Element.Immunization.programEligibility Extends HS.FHIR.DTL.vR4.Model.Base.BackboneElement [ Not ProcedureBlock ]
 {
 
 /// Reference

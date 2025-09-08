@@ -167,7 +167,7 @@ Property admission As Spain.FHIR.DTL.vR5.Model.Element.Encounter.admission(XMLNA
 /// BackboneElement
 /// <p>
 /// List of locations where the patient has been.
-Property location As list Of Spain.FHIR.DTL.vR5.Model.Element.location(XMLNAME = "location", XMLPROJECTION = "ELEMENT");
+Property location As list Of Spain.FHIR.DTL.vR5.Model.Element.Encounter.location(XMLNAME = "location", XMLPROJECTION = "ELEMENT");
 
 /// Reference
 /// <p>
