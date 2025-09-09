@@ -10,8 +10,11 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 <property name='FHIRMessage' type='%DynamicObject' instantiate='0' />
 <property name='immunizationR4' type='HS.FHIR.DTL.vR4.Model.Resource.Immunization' instantiate='0' />
 <property name='immunizationR5' type='Spain.FHIR.DTL.vR5.Model.Resource.Immunization' instantiate='0' />
+<property name='FHIRRequest' type='HS.FHIRServer.Interop.Request' instantiate='1' />
+<property name='FHIRResponse' type='HS.FHIRServer.Interop.Response' instantiate='1' />
+<property name='FHIRStream' type='%Stream.Object' instantiate='0' />
 </context>
-<sequence xend='200' yend='450' >
+<sequence xend='200' yend='750' >
 <code name='HL7 to FHIR R4' xpos='200' ypos='250' >
 <annotation><![CDATA[From HL7 message to FHIR R4 Dynamic Object
 ]]></annotation>
@@ -20,7 +23,7 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
  set SDAToFHIR = ##class(HS.FHIR.DTL.Util.API.Transform.SDA3ToFHIR).TransformStream(SDAMessageTemp,"HS.SDA3.Container","R4")
  set context.FHIRMessage = SDAToFHIR.bundle]]>
 </code>
-<code name='Mapeo de bundle a R5' xpos='200' ypos='350' >
+<code name='Mapeo de bundle' xpos='200' ypos='350' >
 <![CDATA[ set obj = ##class(HS.FHIR.DTL.vR4.Model.Resource.Bundle).FromJSONHelper(context.FHIRMessage, "vR4")
 
  for i=1:1:obj.entry.Count() {
@@ -69,10 +72,40 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
     }
  } 
  
+ set context.FHIRStream = obj.ToJSON()
+ 
  set FHIRMessageTemp = obj.ToJSON()
  Set fullString = ""
  While 'FHIRMessageTemp.AtEnd {
      Set fullString = fullString _ FHIRMessageTemp.Read()
+ } 
+ 
+ $$$TRACE(fullString)]]>
+</code>
+<code name='Solicitud a repositorio' xpos='200' ypos='450' >
+<![CDATA[ Set context.FHIRRequest.Request.RequestMethod = "POST"
+ Set context.FHIRRequest.Request.RequestPath = ""
+ Set context.FHIRRequest.Request.RequestFormatCode= "JSON"
+ Set context.FHIRRequest.Request.SessionApplication = "/csp/healthshare/fhirserver/fhir/r5"
+ Set context.FHIRRequest.Request.IsRecursive = 0
+ set qs=##class(HS.SDA3.QuickStream).%New()
+ set context.FHIRRequest.QuickStreamId = qs.%Id()
+ do qs.CopyFrom(context.FHIRStream)
+ ]]>
+</code>
+<call name='Envío a repositorio' target='HS.FHIRServer.Interop.Operation' async='0' xpos='200' ypos='550' >
+<request type='HS.FHIRServer.Interop.Request' >
+<assign property="callrequest" value="context.FHIRRequest" action="set" languageOverride="" />
+</request>
+<response type='HS.FHIRServer.Interop.Response' >
+<assign property="context.FHIRResponse" value="callresponse" action="set" languageOverride="" />
+</response>
+</call>
+<code name='Imprime resultado' xpos='200' ypos='650' >
+<![CDATA[ Set fullString = ""
+ Set quickStreamIn = ##class(HS.SDA3.QuickStream).%OpenId(context.FHIRResponse.QuickStreamId,, .tSC)
+ While 'quickStreamIn.AtEnd {
+     Set fullString = fullString _ quickStreamIn.Read()
  } 
  
  $$$TRACE(fullString)]]>

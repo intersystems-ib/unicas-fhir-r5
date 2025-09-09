@@ -19,6 +19,12 @@ XData ProductionDefinition
   </Item>
   <Item Name="Spain.BP.FromHL7ToFHIR" Category="" ClassName="Spain.BP.FromHL7ToFHIR" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
   </Item>
+  <Item Name="HL7_XML_In" Category="" ClassName="ITB.HL7.BS.FileXMLService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+    <Setting Target="Host" Name="MessageSchemaCategory">2.6</Setting>
+    <Setting Target="Host" Name="TargetConfigNames">Spain.BP.FromHL7ToFHIR</Setting>
+    <Setting Target="Adapter" Name="FilePath">/iris-shared/in/</Setting>
+    <Setting Target="Adapter" Name="FileSpec">*.xml</Setting>
+  </Item>
 </Production>
 }
 
