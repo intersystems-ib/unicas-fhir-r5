@@ -14,7 +14,7 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <transform sourceClass='HS.FHIR.DTL.vR4.Model.Resource.Condition' targetClass='Spain.FHIR.DTL.vR5.Model.Resource.Condition' create='new' language='objectscript' >
 <assign value='source.text' property='target.text' action='set' />
 <assign value='source.newResourceReference' property='target.newResourceReference' action='set' />
-<if condition='source.primitiveExtension &apos;= ""' >
+<if condition='($ISOBJECT(source.primitiveExtension) &amp;&amp; (source.primitiveExtension.Count()&gt;0))' >
 <true>
 <assign value='source.primitiveExtension' property='target.primitiveExtension' action='set' />
 </true>
@@ -23,41 +23,41 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='source.meta' property='target.meta' action='set' />
 <assign value='source.implicitRules' property='target.implicitRules' action='set' />
 <assign value='source.language' property='target.language' action='set' />
-<if condition='source.newResource &apos;= ""' >
+<if condition='($ISOBJECT(source.newResource) &amp;&amp; (source.newResource.Count()&gt;0))' >
 <true>
 <assign value='source.newResource' property='target.newResource' action='set' />
 </true>
 </if>
-<if condition='source.contained &apos;= ""' >
+<if condition='($ISOBJECT(source.contained) &amp;&amp; (source.contained.Count()&gt;0))' >
 <true>
 <assign value='source.contained' property='target.contained' action='set' />
 </true>
 </if>
-<if condition='source.extension &apos;= ""' >
+<if condition='($ISOBJECT(source.extension) &amp;&amp; (source.extension.Count()&gt;0))' >
 <true>
 <assign value='source.extension' property='target.extension' action='set' />
 </true>
 </if>
-<if condition='source.modifierExtension &apos;= ""' >
+<if condition='($ISOBJECT(source.modifierExtension) &amp;&amp; (source.modifierExtension.Count()&gt;0))' >
 <true>
 <assign value='source.modifierExtension' property='target.modifierExtension' action='set' />
 </true>
 </if>
-<if condition='source.identifier &apos;= ""' >
+<if condition='($ISOBJECT(source.identifier) &amp;&amp; (source.identifier.Count()&gt;0))' >
 <true>
 <assign value='source.identifier' property='target.identifier' action='set' />
 </true>
 </if>
 <assign value='source.clinicalStatus' property='target.clinicalStatus' action='set' />
 <assign value='source.verificationStatus' property='target.verificationStatus' action='set' />
-<if condition='source.category &apos;= ""' >
+<if condition='($ISOBJECT(source.category) &amp;&amp; (source.category.Count()&gt;0))' >
 <true>
 <assign value='source.category' property='target.category' action='set' />
 </true>
 </if>
 <assign value='source.severity' property='target.severity' action='set' />
 <assign value='source.code' property='target.code' action='set' />
-<if condition='source.bodySite &apos;= ""' >
+<if condition='($ISOBJECT(source.bodySite) &amp;&amp; (source.bodySite.Count()&gt;0))' >
 <true>
 <assign value='source.bodySite' property='target.bodySite' action='set' />
 </true>
@@ -75,7 +75,7 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='source.abatementRange' property='target.abatementRange' action='set' />
 <assign value='source.abatementString' property='target.abatementString' action='set' />
 <assign value='source.recordedDate' property='target.recordedDate' action='set' />
-<if condition='source.recorder &apos;= ""' >
+<if condition='$ISOBJECT(source.recorder)' >
 <true>
 <assign value='##class(Spain.FHIR.DTL.vR5.Model.Resource.Condition).%New()' property='tmp' action='set' />
 <assign value='##class(HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept).%New()' property='tmp1' action='set' />
@@ -89,7 +89,7 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='source.recorder.reference' property='tmp.actor' action='set' />
 </true>
 </if>
-<if condition='source.asserter&apos;= ""' >
+<if condition='$ISOBJECT(source.asserter)' >
 <true>
 <assign value='##class(Spain.FHIR.DTL.vR5.Model.Resource.Condition).%New()' property='tmp' action='set' />
 <assign value='##class(HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept).%New()' property='tmp1' action='set' />
@@ -103,17 +103,17 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='source.asserter.reference' property='tmp.actor' action='set' />
 </true>
 </if>
-<if condition='source.stage &apos;= ""' >
+<if condition='($ISOBJECT(source.stage) &amp;&amp; (source.stage.Count()&gt;0))' >
 <true>
 <assign value='source.stage' property='target.stage' action='set' />
 </true>
 </if>
-<if condition='source.evidence &apos;= ""' >
+<if condition='($ISOBJECT(source.evidence) &amp;&amp; (source.evidence.Count()&gt;0))' >
 <true>
 <assign value='source.evidence' property='target.evidence' action='set' />
 </true>
 </if>
-<if condition='source.note &apos;= ""' >
+<if condition='($ISOBJECT(source.note) &amp;&amp; (source.note.Count()&gt;0))' >
 <true>
 <assign value='source.note' property='target.note' action='set' />
 </true>

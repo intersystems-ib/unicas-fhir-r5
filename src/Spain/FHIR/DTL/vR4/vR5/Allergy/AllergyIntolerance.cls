@@ -18,32 +18,32 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='source.meta' property='target.meta' action='set' />
 <assign value='source.implicitRules' property='target.implicitRules' action='set' />
 <assign value='source.language' property='target.language' action='set' />
-<if condition='source.primitiveExtension &apos;= ""' >
+<if condition='($ISOBJECT(source.primitiveExtension) &amp;&amp; (source.primitiveExtension.Count()&gt;0))' >
 <true>
 <assign value='source.primitiveExtension' property='target.primitiveExtension' action='set' />
 </true>
 </if>
-<if condition='source.extension &apos;= ""' >
+<if condition='($ISOBJECT(source.extension) &amp;&amp; (source.extension.Count()&gt;0))' >
 <true>
 <assign value='source.extension' property='target.extension' action='set' />
 </true>
 </if>
-<if condition='source.contained &apos;= ""' >
+<if condition='($ISOBJECT(source.contained) &amp;&amp; (source.contained.Count()&gt;0))' >
 <true>
 <assign value='source.contained' property='target.contained' action='set' />
 </true>
 </if>
-<if condition='source.newResource &apos;= ""' >
+<if condition='($ISOBJECT(source.newResource) &amp;&amp; (source.newResource.Count()&gt;0))' >
 <true>
 <assign value='source.newResource' property='target.newResource' action='set' />
 </true>
 </if>
-<if condition='source.modifierExtension &apos;= ""' >
+<if condition='($ISOBJECT(source.modifierExtension) &amp;&amp; (source.modifierExtension.Count()&gt;0))' >
 <true>
 <assign value='source.modifierExtension' property='target.modifierExtension' action='set' />
 </true>
 </if>
-<if condition='source.identifier &apos;= ""' >
+<if condition='($ISOBJECT(source.identifier) &amp;&amp; (source.identifier.Count()&gt;0))' >
 <true>
 <assign value='source.identifier' property='target.identifier' action='set' />
 </true>
@@ -51,7 +51,7 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='source.clinicalStatus' property='target.clinicalStatus' action='set' />
 <assign value='source.verificationStatus' property='target.verificationStatus' action='set' />
 <assign value='source.type' property='target.type' action='set' />
-<if condition='source.category &apos;= ""' >
+<if condition='($ISOBJECT(source.category) &amp;&amp; (source.category.Count()&gt;0))' >
 <true>
 <assign value='source.category' property='target.category' action='set' />
 </true>
@@ -66,7 +66,7 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='source.onsetRange' property='target.onsetRange' action='set' />
 <assign value='source.onsetString' property='target.onsetString' action='set' />
 <assign value='source.recordedDate' property='target.recordedDate' action='set' />
-<if condition='source.recorder &apos;= ""' >
+<if condition='$ISOBJECT(source.recorder)' >
 <true>
 <group>
 <assign value='target.participant.Count() + 1' property='index' action='set' />
@@ -83,7 +83,7 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 </group>
 </true>
 </if>
-<if condition='source.asserter &apos;= ""' >
+<if condition='$ISOBJECT(source.asserter)' >
 <true>
 <group>
 <assign value='target.participant.Count() + 1' property='index' action='set' />
@@ -101,7 +101,7 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 </true>
 </if>
 <assign value='source.lastOccurrence' property='target.lastOccurrence' action='set' />
-<if condition='source.note &apos;= ""' >
+<if condition='($ISOBJECT(source.note) &amp;&amp; (source.note.Count()&gt;0))' >
 <true>
 <assign value='source.note' property='target.note' action='set' />
 </true>
@@ -110,22 +110,22 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='##class(Spain.FHIR.DTL.vR5.Model.Element.AllergyIntolerance.reaction).%New()' property='tmp' action='set' />
 <assign value='source.reaction.(k1).id' property='tmp.id' action='set' />
 <assign value='source.reaction.(k1).newResourceReference' property='tmp.newResourceReference' action='set' />
-<if condition='source.reaction.(k1).newResource &apos;= ""' >
+<if condition='($ISOBJECT(source.reaction.(k1).newResource) &amp;&amp; (source.reaction.(k1).newResource.Count()&gt;0))' >
 <true>
 <assign value='source.reaction.(k1).newResource' property='tmp.newResource' action='set' />
 </true>
 </if>
-<if condition='source.reaction.(k1).extension &apos;= ""' >
+<if condition='($ISOBJECT(source.reaction.(k1).extension) &amp;&amp; (source.reaction.(k1).extension.Count()&gt;0))' >
 <true>
 <assign value='source.reaction.(k1).extension' property='tmp.extension' action='set' />
 </true>
 </if>
-<if condition='source.reaction.(k1).modifierExtension &apos;= ""' >
+<if condition='($ISOBJECT(source.reaction.(k1).modifierExtension) &amp;&amp; (source.reaction.(k1).modifierExtension.Count()&gt;0))' >
 <true>
 <assign value='source.reaction.(k1).modifierExtension' property='tmp.modifierExtension' action='set' />
 </true>
 </if>
-<if condition='source.reaction.(k1).primitiveExtension &apos;= ""' >
+<if condition='($ISOBJECT(source.reaction.(k1).primitiveExtension) &amp;&amp; (source.reaction.(k1).primitiveExtension.Count()&gt;0))' >
 <true>
 <assign value='source.reaction.(k1).primitiveExtension' property='tmp.primitiveExtension' action='set' />
 </true>

@@ -21,7 +21,8 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 <![CDATA[ 
  do ##class(Spain.Gateway.HL7.HL7ToSDA3).GetSDA(request, .SDAMessageTemp)
  set SDAToFHIR = ##class(HS.FHIR.DTL.Util.API.Transform.SDA3ToFHIR).TransformStream(SDAMessageTemp,"HS.SDA3.Container","R4")
- set context.FHIRMessage = SDAToFHIR.bundle]]>
+ set context.FHIRMessage = SDAToFHIR.bundle
+ $$$TRACE(context.FHIRMessage.%ToJSON())]]>
 </code>
 <code name='Mapeo de bundle' xpos='200' ypos='350' >
 <![CDATA[ set obj = ##class(HS.FHIR.DTL.vR4.Model.Resource.Bundle).FromJSONHelper(context.FHIRMessage, "vR4")
