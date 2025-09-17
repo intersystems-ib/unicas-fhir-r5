@@ -22,7 +22,7 @@ Property status As %String(MAXLEN = 1000000, XMLNAME = "status", XMLPROJECTION =
 /// v3-ActEncounterCode is the REQUIRED FHIR4 ValueSet for codes, 
 /// but if you need to express meanings not found in v3-ActEncounterCode, 
 /// you may formally EXTEND v3-ActEncounterCode to add codes to it.
-Property class As list Of HS.FHIR.DTL.vR4.Model.Datatype.Coding(XMLNAME = "class", XMLPROJECTION = "ELEMENT");
+Property class As list Of HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept(XMLNAME = "class", XMLPROJECTION = "ELEMENT");
 
 /// CodeableConcept
 /// <p>
