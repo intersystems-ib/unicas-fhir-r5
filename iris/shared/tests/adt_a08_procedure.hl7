@@ -1,0 +1,12 @@
+MSH|^~\&|SRCAPP|SRCHOSP|DSTAPP|DSTHOSP|20250917103000||ADT^A08^ADT_A01|MSG00001|P|2.5.1
+EVN|A08|20250917103000
+PID|1||123456^^^SRCHOSP^MR||Doe^Jane||19800101|F
+PV1|1|I|WARD1^ROOM101^BED1||||12345^Garcia^Luis^^^Dr|||||||||||V
+PR1|1||80146002^Appendectomy, laparoscopic^SCT|Laparoscopic appendectomy|20250822103000|C|90
+ROL|1|UP|SUG^Surgeon^HL70062|12345^Garcia^Luis^^^Dr|^Primary surgeon
+ROL|2|UP|AT^Anesthesiologist^HL70062|67890^Lopez^Maria^^^Dr
+OBX|1|CWE|BODY_SITE^Body site||66754008^Appendix structure^SCT||||||F
+OBX|2|CWE|PROC_STATUS^Procedure status||completed^Completed^HL7||||||F
+OBX|3|CWE|REASON^Reason code||74400008^Acute appendicitis^SCT||||||F
+OBX|4|TX|OUTCOME^Outcome||Patient stable; no complications||||||F
+NTE|1||Procedure performed via 3-port laparoscopy. Prophylactic antibiotics administered.

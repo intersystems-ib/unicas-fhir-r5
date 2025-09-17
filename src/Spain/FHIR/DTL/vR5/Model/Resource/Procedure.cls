@@ -145,7 +145,7 @@ Property reportedReference As HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "re
 /// BackboneElement
 /// <p>
 /// The people who performed the procedure.
-Property performer As list Of HS.FHIR.DTL.vR4.Model.Element.Procedure.performer(XMLNAME = "performer", XMLPROJECTION = "ELEMENT");
+Property performer As list Of Spain.FHIR.DTL.vR5.Model.Element.Procedure.performer(XMLNAME = "performer", XMLPROJECTION = "ELEMENT");
 
 /// Reference
 /// <p>
@@ -154,21 +154,11 @@ Property performer As list Of HS.FHIR.DTL.vR4.Model.Element.Procedure.performer(
 /// Location
 Property location As HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "location", XMLPROJECTION = "ELEMENT");
 
-/// CodeableConcept
+/// CodeableReference
 /// <p>
 /// Coded reason procedure performed.
 /// <p>
-/// any FHIR4 code may be used; 
-/// procedure-reason shows EXAMPLE codes, 
-/// but you may use codes from any ValueSet.
-Property reasonCode As list Of HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept(XMLNAME = "reasonCode", XMLPROJECTION = "ELEMENT");
-
-/// Reference
-/// <p>
-/// The justification that the procedure was performed.
-/// <p>
-/// Condition | Observation | Procedure | DiagnosticReport | DocumentReference
-Property reasonReference As list Of HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "reasonReference", XMLPROJECTION = "ELEMENT");
+Property reason As list Of Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference(XMLNAME = "reason", XMLPROJECTION = "ELEMENT");
 
 /// CodeableConcept
 /// <p>
@@ -195,21 +185,11 @@ Property outcome As HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept(XMLNAME = "ou
 /// DiagnosticReport | DocumentReference | Composition
 Property report As list Of HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "report", XMLPROJECTION = "ELEMENT");
 
-/// CodeableConcept
+/// CodeableReference
 /// <p>
 /// Complication following the procedure.
 /// <p>
-/// any FHIR4 code may be used; 
-/// condition-code shows EXAMPLE codes, 
-/// but you may use codes from any ValueSet.
-Property complication As list Of HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept(XMLNAME = "complication", XMLPROJECTION = "ELEMENT");
-
-/// Reference
-/// <p>
-/// A condition that is a result of the procedure.
-/// <p>
-/// Condition
-Property complicationDetail As list Of HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "complicationDetail", XMLPROJECTION = "ELEMENT");
+Property complication As list Of Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference(XMLNAME = "complication", XMLPROJECTION = "ELEMENT");
 
 /// CodeableConcept
 /// <p>
@@ -232,21 +212,17 @@ Property note As list Of HS.FHIR.DTL.vR4.Model.Datatype.Annotation(XMLNAME = "no
 /// or removed device.
 Property focalDevice As list Of HS.FHIR.DTL.vR4.Model.Element.Procedure.focalDevice(XMLNAME = "focalDevice", XMLPROJECTION = "ELEMENT");
 
-/// Reference
-/// <p>
-/// Items used during procedure.
-/// <p>
-/// Device | Medication | Substance
-Property usedReference As list Of HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "usedReference", XMLPROJECTION = "ELEMENT");
-
-/// CodeableConcept
+/// CodeableReference
 /// <p>
 /// Coded items used during the procedure.
 /// <p>
-/// any FHIR4 code may be used; 
-/// device-kind shows EXAMPLE codes, 
-/// but you may use codes from any ValueSet.
-Property usedCode As list Of HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept(XMLNAME = "usedCode", XMLPROJECTION = "ELEMENT");
+Property used As list Of Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference(XMLNAME = "used", XMLPROJECTION = "ELEMENT");
+
+/// Reference
+/// <p>
+/// Supporting info
+/// <p>
+Property supportingInfo As list Of HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "supportingInfo", XMLPROJECTION = "ELEMENT");
 
 Parameter ELEMENTQUALIFIED = 1;
 

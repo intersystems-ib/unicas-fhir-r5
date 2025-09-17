@@ -51,9 +51,17 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='source.status' property='target.status' action='set' />
 <if condition='$ISOBJECT(source.class)' >
 <true>
-<assign value='source.class' property='target.class.(1)' action='set' />
+<assign value='##class(HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept).%New()' property='tmp' action='set' />
+<assign value='source.class' property='tmp.coding.(1)' action='set' />
+<assign value='tmp' property='target.class.(1)' action='set' />
 </true>
 </if>
+<foreach property='source.classHistory()' key='k1' >
+<assign value='target.class.Count() + 1' property='i' action='set' />
+<assign value='##class(HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept).%New()' property='tmp' action='set' />
+<assign value='source.classHistory.(k1).class' property='tmp.coding.(1)' action='set' />
+<assign value='tmp' property='target.class.(i).coding.(1)' action='set' />
+</foreach>
 <if condition='($ISOBJECT(source.type) &amp;&amp; (source.type.Count()&gt;0))' >
 <true>
 <assign value='source.type.(1)' property='target.type.(1)' action='set' />

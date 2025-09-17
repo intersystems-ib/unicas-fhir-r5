@@ -77,8 +77,16 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='source.position' property='target.position' action='set' />
 <assign value='source.managingOrganization' property='target.managingOrganization' action='set' />
 <assign value='source.partOf' property='target.partOf' action='set' />
-<assign value='source.hoursOfOperation.(1)' property='target.hoursOfOperation.(1)' action='set' />
-<assign value='source.endpoint.(1)' property='target.endpoint.(1)' action='set' />
+<if condition='($ISOBJECT(source.hoursOfOperation) &amp;&amp; (source.hoursOfOperation.Count() &gt; 0))' >
+<true>
+<assign value='source.hoursOfOperation' property='target.hoursOfOperation' action='set' />
+</true>
+</if>
+<if condition='($ISOBJECT(source.endpoint) &amp;&amp; (source.endpoint.Count() &gt; 0))' >
+<true>
+<assign value='source.endpoint' property='target.endpoint' action='set' />
+</true>
+</if>
 </transform>
 }
 

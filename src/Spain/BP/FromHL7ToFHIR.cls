@@ -77,6 +77,12 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
       Set item.resource = locationR5
       Do obj.entry.SetAt(item, i)           
     }
+    elseif ($CLASSNAME(item.resource) = "HS.FHIR.DTL.vR4.Model.Resource.Procedure")
+    {
+      Set status = ##class(Spain.FHIR.DTL.vR4.vR5.Procedure).Transform(item.resource, .procedureR5)            
+      Set item.resource = procedureR5
+      Do obj.entry.SetAt(item, i)           
+    }
  } 
  
  set context.FHIRStream = obj.ToJSON()
