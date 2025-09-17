@@ -1,0 +1,18 @@
+MSH|^~\&|SRCAPP|SRCHOSP|DSTAPP|DSTHOSP|20250917114500||ORU^R01^ORU_R01|MSG-FHX-0001|P|2.5.1
+PID|1||123456^^^SRCHOSP^MR||Doe^Jane||19800101|F
+PV1|1|O|CLINIC^ROOM1|||||||||||||||V
+OBR|1||FHX-0001|10157-6^History of family member diseases Narrative^LN|20250917114000
+OBX|1|CWE|REL^Relationship^HL70063||MTH^Mother^HL70063||||||F|||20250917114000||1
+OBX|2|CWE|FHX.CONDITION^Family history condition^99LOCAL||C50.9^Malignant neoplasm of breast, unspecified^ICD-10-CM||||||F|||20250917114000||1-1
+OBX|3|NM|FHX.AGE_ONSET^Age at onset (years)^99LOCAL||45|a|||||F|||20250917114000||1-2
+OBX|4|CWE|FHX.OUTCOME^Outcome^99LOCAL||alive^Alive^HL70078||||||F|||20250917114000||1-3
+NTE|1||Mother diagnosed with breast cancer; treated with surgery and adjuvant therapy.
+OBX|5|CWE|REL^Relationship^HL70063||FTH^Father^HL70063||||||F|||20250917114000||2
+OBX|6|CWE|FHX.CONDITION^Family history condition^99LOCAL||I21.9^Acute myocardial infarction, unspecified^ICD-10-CM||||||F|||20250917114000||2-1
+OBX|7|NM|FHX.AGE_ONSET^Age at onset (years)^99LOCAL||52|a|||||F|||20250917114000||2-2
+OBX|8|CWE|FHX.OUTCOME^Outcome^99LOCAL||deceased^Deceased^HL70078||||||F|||20250917114000||2-3
+NTE|2||Father died following acute MI; history of smoking.
+OBX|9|CWE|REL^Relationship^HL70063||SIS^Sister^HL70063||||||F|||20250917114000||3
+OBX|10|CWE|FHX.CONDITION^Family history condition^99LOCAL||E11.9^Type 2 diabetes mellitus without complications^ICD-10-CM||||||F|||20250917114000||3-1
+OBX|11|NM|FHX.AGE_ONSET^Age at onset (years)^99LOCAL||38|a|||||F|||20250917114000||3-2
+NTE|3||Sister on oral hypoglycemics; good control.
