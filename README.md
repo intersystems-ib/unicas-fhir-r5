@@ -13,10 +13,12 @@ This project implements FHIR R5 resources used for ÚNICAS for InterSystems FHIR
 # What are you going to find in this project?
 ## FHIR resources ObjectScript classes
 * All the resources required for ÚNICAS implementation have been developed, you can find it under: **Spain.FHIR.DTL.vR5.Model** package.
+
 ![image](https://github.com/intersystems-ib/unicas-fhir-r5/blob/main/images/resources_package.png)
 
 ## Transformations between R4 and R5 resources
 * The automatic transformation between HL7 and FHIR only works for FHIR R4, so all the transformations required to translate R4 resources to R5 have been implemented. The transformations are located in: **Spain.FHIR.DTL.vR4.vR5** package.
+
 ![image](https://github.com/intersystems-ib/unicas-fhir-r5/blob/main/images/transformations_package.png)
 
 ## Minor updates in standard code:
