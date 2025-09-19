@@ -65,21 +65,11 @@ Property specialty As list Of HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept(XML
 /// you may use codes from any ValueSet.
 Property appointmentType As HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept(XMLNAME = "appointmentType", XMLPROJECTION = "ELEMENT");
 
-/// CodeableConcept
+/// CodeableReference
 /// <p>
 /// Coded reason this appointment is scheduled.
 /// <p>
-/// encounter-reason is the PREFERRED FHIR4 ValueSet for codes, 
-/// but if you need to express meanings not found in encounter-reason, 
-/// you may use codes from any ValueSet.
-Property reasonCode As list Of HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept(XMLNAME = "reasonCode", XMLPROJECTION = "ELEMENT");
-
-/// Reference
-/// <p>
-/// Reason the appointment is to take place (resource)
-/// <p>
-/// Condition | Procedure | Observation | ImmunizationRecommendation
-Property reasonReference As list Of HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "reasonReference", XMLPROJECTION = "ELEMENT");
+Property reason As list Of Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference(XMLNAME = "reason", XMLPROJECTION = "ELEMENT");
 
 /// Codeable Concept
 /// <p>
@@ -149,27 +139,46 @@ Property minutesDuration As %Integer(XMLNAME = "minutesDuration", XMLPROJECTION 
 /// Slot
 Property slot As list Of HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "slot", XMLPROJECTION = "ELEMENT");
 
+/// Reference
+/// <p>
+/// The set of accounts that may be used for billing for this Appointment
+/// <p>
+/// Account
+Property account As list Of HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "account", XMLPROJECTION = "ELEMENT");
+
 /// dateTime
 /// <p>
 /// The date that this appointment was initially created.
 Property created As %String(MAXLEN = 1000000, XMLNAME = "created", XMLPROJECTION = "ATTRIBUTE");
 
-/// string
+/// dateTime
 /// <p>
-/// Additional comments.
-Property comment As %String(MAXLEN = 1000000, XMLNAME = "comment", XMLPROJECTION = "ATTRIBUTE");
+/// The date that this appointment was initially created.
+Property cancellationDate As %String(MAXLEN = 1000000, XMLNAME = "cancellationDate", XMLPROJECTION = "ATTRIBUTE");
 
 /// string
 /// <p>
+/// Additional comments.
+Property note As list Of HS.FHIR.DTL.vR4.Model.Datatype.Annotation(XMLNAME = "note", XMLPROJECTION = "ELEMENT");
+
+/// Codeable Reference
+/// <p>
 /// Detailed information and instructions for the patient.
-Property patientInstruction As %String(MAXLEN = 1000000, XMLNAME = "patientInstruction", XMLPROJECTION = "ATTRIBUTE");
+Property patientInstruction As list Of Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference(XMLNAME = "patientInstruction", XMLPROJECTION = "ELEMENT");
+
+/// Reference
+/// <p>
+/// The request this appointment is allocated to assess.
+/// <p>
+/// CarePlan | DeviceRequest | MedicationRequest | ServiceRequest
+Property basedOn As list Of HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "basedOn", XMLPROJECTION = "ELEMENT");
 
 /// Reference
 /// <p>
 /// The service request this appointment is allocated to assess.
 /// <p>
-/// ServiceRequest
-Property basedOn As list Of HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "basedOn", XMLPROJECTION = "ELEMENT");
+/// Patient | Group
+Property subject As HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "subject", XMLPROJECTION = "ELEMENT");
 
 /// BackboneElement
 /// <p>
@@ -180,6 +189,21 @@ Property participant As list Of HS.FHIR.DTL.vR4.Model.Element.Appointment.partic
 /// <p>
 /// Potential date/time interval(s) requested to allocate the appointment within.
 Property requestedPeriod As list Of HS.FHIR.DTL.vR4.Model.Datatype.Period(XMLNAME = "requestedPeriod", XMLPROJECTION = "ELEMENT");
+
+/// integer
+/// <p>
+/// The sequence number in the recurrence.
+Property recurrenceId As %Integer(XMLNAME = "recurrenceId", XMLPROJECTION = "ATTRIBUTE");
+
+/// Boolean
+/// <p>
+/// Indicates that this appointment varies from a recurrence pattern.
+Property occurrenceChanged As %Boolean(XMLNAME = "occurrenceChanged", XMLPROJECTION = "ATTRIBUTE");
+
+/// recurrenceTemplate
+/// <p>
+/// Details of the recurrence pattern/template used to generate occurrences
+Property recurrenceTemplate As list Of Spain.FHIR.DTL.vR5.Model.Element.Appointment.recurrenceTemplate(XMLNAME = "recurrenceTemplate", XMLPROJECTION = "ELEMENT");
 
 Parameter ELEMENTQUALIFIED = 1;
 

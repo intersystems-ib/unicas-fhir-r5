@@ -120,18 +120,22 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 </if>
 <assign value='source.period' property='target.actualPeriod' action='set' />
 <assign value='source.length' property='target.length' action='set' />
-<foreach property='source.reasonCode()' key='k1' >
-<assign value='##class(Spain.FHIR.DTL.vR5.Model.Element.Encounter.reason).%New()' property='tmp' action='set' />
-<assign value='source.reasonCode.(k1)' property='tmp.use' action='set' key='k1' />
-<if condition='$ISOBJECT(source.reasonReference) &amp;&amp; $ISOBJECT(source.reasonReference.(k1) &apos;= "")' >
+<if condition='($ISOBJECT(source.reasonCode) &amp;&amp; (source.reasonCode.Count() &gt; 0))' >
 <true>
-<assign value='##class(Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference).%New()' property='tmp1' action='set' />
-<assign value='source.reasonReference.(k1)' property='tmp1.reference' action='set' />
-<assign value='tmp1' property='tmp.value' action='set' />
+<assign value='##class(Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference).%New()' property='tmp' action='set' />
+<assign value='source.reasonCode' property='tmp.use' action='set' />
+<assign value='target.reason.Count() + 1' property='i' action='set' />
+<assign value='tmp' property='target.reason.(i)' action='set' />
 </true>
 </if>
-<assign value='tmp' property='target.reason' action='set' key='k1' />
-</foreach>
+<if condition='($ISOBJECT(source.reasonReference) &amp;&amp; (source.reasonReference.Count() &gt; 0))' >
+<true>
+<assign value='##class(Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference).%New()' property='tmp' action='set' />
+<assign value='source.reasonReference' property='tmp.value' action='set' />
+<assign value='target.reason.Count() + 1' property='i' action='set' />
+<assign value='tmp' property='target.reason.(i)' action='set' />
+</true>
+</if>
 <if condition='($ISOBJECT(source.diagnosis) &amp;&amp; (source.diagnosis.Count()&gt;0))' >
 <true>
 <assign value='source.diagnosis' property='target.diagnosis' action='set' />

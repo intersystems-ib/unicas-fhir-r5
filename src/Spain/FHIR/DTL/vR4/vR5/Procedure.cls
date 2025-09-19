@@ -91,16 +91,22 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 </true>
 </if>
 <assign value='source.location' property='target.location' action='set' />
-<foreach property='source.reasonCode()' key='k1' >
-<assign value='##class(Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference).%New()' property='tmp' action='set' />
-<assign value='source.reasonCode.(k1)' property='tmp.concept' action='set' />
-<if condition='$ISOBJECT(source.reasonReference.(k1))' >
+<if condition='($ISOBJECT(source.reasonCode) &amp;&amp; (source.reasonCode.Count() &gt; 0))' >
 <true>
-<assign value='source.reasonReference.(k1)' property='tmp.reference' action='set' />
+<assign value='##class(Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference).%New()' property='tmp' action='set' />
+<assign value='source.reasonCode' property='tmp.use' action='set' />
+<assign value='target.reason.Count() + 1' property='i' action='set' />
+<assign value='tmp' property='target.reason.(i)' action='set' />
 </true>
 </if>
-<assign value='tmp' property='target.reason.(k1)' action='set' />
-</foreach>
+<if condition='($ISOBJECT(source.reasonReference) &amp;&amp; (source.reasonReference.Count() &gt; 0))' >
+<true>
+<assign value='##class(Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference).%New()' property='tmp' action='set' />
+<assign value='source.reasonReference' property='tmp.value' action='set' />
+<assign value='target.reason.Count() + 1' property='i' action='set' />
+<assign value='tmp' property='target.reason.(i)' action='set' />
+</true>
+</if>
 <if condition='($ISOBJECT(source.bodySite) &amp;&amp; (source.bodySite.Count()&gt;0))' >
 <true>
 <assign value='source.bodySite' property='target.bodySite' action='set' />

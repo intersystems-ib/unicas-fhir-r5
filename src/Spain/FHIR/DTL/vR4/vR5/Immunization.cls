@@ -73,10 +73,14 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='source.note' property='target.note' action='set' />
 </true>
 </if>
-<if condition='($ISOBJECT(source.reasonCode) &amp;&amp; (source.reasonCode.Count()&gt;0))' >
+<if condition='($ISOBJECT(source.reasonCode) &amp;&amp; (source.reasonCode.Count()&gt;0)) || ($ISOBJECT(source.reasonReference) &amp;&amp; (source.reasonReference.Count()&gt;0))' >
 <true>
 <assign value='##class(Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference).%New()' property='tmp' action='set' />
+<if condition='($ISOBJECT(source.reasonCode) &amp;&amp; (source.reasonCode.Count()&gt;0))' >
+<true>
 <assign value='source.reasonCode.(1)' property='tmp.concept' action='set' />
+</true>
+</if>
 <if condition='($ISOBJECT(source.reasonReference) &amp;&amp; (source.reasonReference.Count()&gt;0))' >
 <true>
 <assign value='source.reasonReference.(1)' property='tmp.reference' action='set' />
