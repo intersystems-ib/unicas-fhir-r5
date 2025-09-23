@@ -11,7 +11,7 @@ Property date As %String(MAXLEN = 1000000, XMLNAME = "date", XMLPROJECTION = "AT
 /// Manifestacion.
 /// <p>
 /// manifestation
-Property manifestation As Spain.FHIR.DTL.vR5.Model.Base.CodeableReference(XMLNAME = "manifestation", XMLPROJECTION = "ELEMENT");
+Property manifestation As Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference(XMLNAME = "manifestation", XMLPROJECTION = "ELEMENT");
 
 /// boolean
 /// <p>

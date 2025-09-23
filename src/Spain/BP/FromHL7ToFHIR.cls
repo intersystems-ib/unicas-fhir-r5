@@ -83,6 +83,24 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
       Set item.resource = procedureR5
       Do obj.entry.SetAt(item, i)           
     }
+    elseif ($CLASSNAME(item.resource) = "HS.FHIR.DTL.vR4.Model.Resource.MedicationRequest")
+    {
+      Set status = ##class(Spain.FHIR.DTL.vR4.vR5.MedicationRequest).Transform(item.resource, .medicationRequestR5)            
+      Set item.resource = medicationRequestR5
+      Do obj.entry.SetAt(item, i)           
+    }
+    elseif ($CLASSNAME(item.resource) = "HS.FHIR.DTL.vR4.Model.Resource.MedicationDispense")
+    {
+      Set status = ##class(Spain.FHIR.DTL.vR4.vR5.MedicationDispense).Transform(item.resource, .medicationDispenseR5)            
+      Set item.resource = medicationDispenseR5
+      Do obj.entry.SetAt(item, i)           
+    }
+    elseif ($CLASSNAME(item.resource) = "HS.FHIR.DTL.vR4.Model.Resource.DocumentReference")
+    {
+      Set status = ##class(Spain.FHIR.DTL.vR4.vR5.DocumentReference).Transform(item.resource, .documentReferenceR5)            
+      Set item.resource = documentReferenceR5
+      Do obj.entry.SetAt(item, i)           
+    }
  } 
  
  set context.FHIRStream = obj.ToJSON()

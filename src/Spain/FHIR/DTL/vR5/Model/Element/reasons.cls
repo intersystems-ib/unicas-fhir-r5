@@ -6,7 +6,7 @@ Class Spain.FHIR.DTL.vR5.Model.Element.reasons Extends HS.FHIR.DTL.vR4.Model.Bas
 /// The reason.
 /// <p>
 /// Condition | Procedure
-Property value As list Of Spain.FHIR.DTL.vR5.Model.Base.CodeableReference(XMLNAME = "value", XMLPROJECTION = "ELEMENT");
+Property value As list Of Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference(XMLNAME = "value", XMLPROJECTION = "ELEMENT");
 
 /// CodeableConcept
 /// <p>
