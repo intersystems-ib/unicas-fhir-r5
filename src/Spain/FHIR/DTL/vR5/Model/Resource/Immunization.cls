@@ -188,7 +188,7 @@ Property fundingSource As HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept(XMLNAME
 /// BackboneElement
 /// <p>
 /// Details of a reaction that follows immunization.
-Property reaction As list Of Spain.FHIR.DTL.vR5.Model.Element.reaction(XMLNAME = "reaction", XMLPROJECTION = "ELEMENT");
+Property reaction As list Of Spain.FHIR.DTL.vR5.Model.Element.Immunization.reaction(XMLNAME = "reaction", XMLPROJECTION = "ELEMENT");
 
 /// BackboneElement
 /// <p>
