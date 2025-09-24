@@ -122,7 +122,7 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <assign value='source.length' property='target.length' action='set' />
 <if condition='($ISOBJECT(source.reasonCode) &amp;&amp; (source.reasonCode.Count() &gt; 0))' >
 <true>
-<assign value='##class(Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference).%New()' property='tmp' action='set' />
+<assign value='##class(Spain.FHIR.DTL.vR5.Model.Element.Encounter.reason).%New()' property='tmp' action='set' />
 <assign value='source.reasonCode' property='tmp.use' action='set' />
 <assign value='target.reason.Count() + 1' property='i' action='set' />
 <assign value='tmp' property='target.reason.(i)' action='set' />
@@ -130,7 +130,7 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 </if>
 <if condition='($ISOBJECT(source.reasonReference) &amp;&amp; (source.reasonReference.Count() &gt; 0))' >
 <true>
-<assign value='##class(Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference).%New()' property='tmp' action='set' />
+<assign value='##class(Spain.FHIR.DTL.vR5.Model.Element.Encounter.reason).%New()' property='tmp' action='set' />
 <assign value='source.reasonReference' property='tmp.value' action='set' />
 <assign value='target.reason.Count() + 1' property='i' action='set' />
 <assign value='tmp' property='target.reason.(i)' action='set' />
