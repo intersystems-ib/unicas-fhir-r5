@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="spain-unicas.ZPM">
+    <Module>
+      <Name>spain-unicas</Name>
+      <Version>1.0.0</Version>
+      <Description>Module developed to implement UNICAS project based on FHIR R5</Description>
+      <Keywords>unicas spain fhir r5</Keywords>
+      <Author>
+        <Person>InterSystems Iberia</Person>
+        <Organization>InterSystems</Organization>
+        <CopyrightDate>2025</CopyrightDate>
+        <License>MIT</License>
+      </Author>
+      <Packaging>module</Packaging>
+      <SourcesRoot>src</SourcesRoot>
+      <Resource Name="Spain.PKG"/>
+    </Module>
+  </Document>
+</Export>

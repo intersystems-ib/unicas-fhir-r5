@@ -11,29 +11,14 @@ ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ENV PATH="$JAVA_HOME/bin:$PATH"
 
 WORKDIR /opt/irisapp
-RUN chown -R irisowner:irisowner /opt/irisapp
+RUN chown -R ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_MGRUSER} /opt/irisapp
 
-USER irisowner
+USER ${ISC_PACKAGE_MGRUSER}
 
-# copy files to image
-WORKDIR /opt/irisapp
- 
-COPY --chown=$ISC_PACKAGE_MGRUSER:$ISC_PACKAGE_IRISGROUP /iris/irissession.sh /
-RUN chmod +x /irissession.sh
+COPY src src
+COPY module.xml module.xml
+COPY /iris/iris.script /tmp/iris.script
 
-SHELL ["/irissession.sh"]
-
-RUN \
-zn "%SYS" \
-do ##class(SYS.Container).QuiesceForBundling() \
-do ##class(Security.Users).UnExpireUserPasswords("*") 
-
-RUN \
-zn "HSLIB" \
-Set appKey = "/fhirserver/fhir/r5" \
-Set strategyClass = "HS.FHIRServer.Storage.Json.InteractionsStrategy" \
-Set metadataConfigKey = $lb("hl7.fhir.r5.core@5.0.0") \
-Do ##class(HS.Util.Installer.Foundation).Install("FHIRSERVER") \
-zn "FHIRSERVER" \
-Do ##class(HS.FHIRServer.Installer).InstallNamespace() \
-Do ##class(HS.FHIRServer.Installer).InstallInstance(appKey, strategyClass, metadataConfigKey) \
+RUN iris start IRIS \
+	&& iris session IRIS < /tmp/iris.script \
+    && iris stop IRIS quietly
