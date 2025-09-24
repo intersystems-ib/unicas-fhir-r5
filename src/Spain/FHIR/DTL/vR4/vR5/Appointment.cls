@@ -69,14 +69,14 @@ XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 <foreach property='source.reasonCode()' key='k1' >
 <assign value='##class(Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference).%New()' property='tmp' action='set' />
 <assign value='source.reasonCode.(k1)' property='tmp.concept' action='set' />
-<assign value='target.reason.Count() + 1' property='i' action='set' />
-<assign value='tmp' property='target.reason.(i)' action='set' />
+<assign value='target.reason.Count()' property='i' action='set' />
+<assign value='tmp' property='target.reason.(i + 1)' action='set' />
 </foreach>
 <foreach property='source.reasonReference()' key='k1' >
 <assign value='##class(Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference).%New()' property='tmp' action='set' />
 <assign value='source.reasonCode.(k1)' property='tmp.reference' action='set' />
-<assign value='target.reason.Count() + 1' property='i' action='set' />
-<assign value='tmp' property='target.reason.(i)' action='set' />
+<assign value='target.reason.Count()' property='i' action='set' />
+<assign value='tmp' property='target.reason.(i + 1)' action='set' />
 </foreach>
 </transform>
 }
