@@ -27,3 +27,15 @@ This project implements FHIR R5 resources used for ÚNICAS for InterSystems FHIR
 
 ### Business Process
 * **Spain.BP.FromHL7ToFHIR** is a BPL class developed as an example about how to get a HL7 message, transform it into SDA3 message in a first step, translate it into R4 bundle resource and transform it to R5.
+
+## Installing ÚNICAS packages in FHIR repository
+
+ÚNICAS IG has defined his own package with 3 dependencies that you need to import:
+* "hl7.terminology.r5" : "6.5.0",
+* "hl7.fhir.uv.extensions.r5" : "5.2.0",
+* "hl7.fhir.uv.ips" : "1.1.0"
+There is a problem with the *hl7.fhir.uv.ips* importation, this package is only published for FHIR R4, if you try to import it into a R5 server you'll get a compatibility error, to allow the importation is required to remove that package from the dependences.
+The command for packages instalation is:
+```
+do ##class(HS.FHIRMeta.Load.NpmLoader).importPackages($lb("/iris-shared/packages/hl7.terminology.r5-6.5.0/package", "/iris-shared/packages/hl7.fhir.uv.extensions.r5-5.2.0/package","/iris-shared/packages/full-ig/package"))
+```

@@ -5,7 +5,7 @@ do ##class(Security.Users).UnExpireUserPasswords("*")
 
 zn "HSLIB"
 
-Set appKey = "/fhirserver/fhir/r5"
+Set appKey = "/csp/healthshare/fhirserver/fhir/r5"
 Set strategyClass = "HS.FHIRServer.Storage.Json.InteractionsStrategy"
 Set metadataConfigKey = $lb("hl7.fhir.r5.core@5.0.0")
 Do ##class(HS.Util.Installer.Foundation).Install("FHIRSERVER")
@@ -15,4 +15,6 @@ zn "FHIRSERVER"
 Do ##class(HS.FHIRServer.Installer).InstallNamespace()
 Do ##class(HS.FHIRServer.Installer).InstallInstance(appKey, strategyClass, metadataConfigKey)
 
-s version="latest" s r=##class(%Net.HttpRequest).%New(),r.Server="pm.community.intersystems.com",r.SSLConfiguration="ISC.FeatureTracker.SSL.Config" d r.Get("/packages/zpm/"_version_"/installer"),$system.OBJ.LoadStream(r.HttpResponse.Data,"c")
+set sc = $SYSTEM.OBJ.LoadDir("/opt/irisapp/src/Spain", "ck", , 1)
+
+do ##class(HS.FHIRMeta.Load.NpmLoader).importPackages($lb("/iris-shared/packages/hl7.terminology.r5-6.5.0/package", "/iris-shared/packages/hl7.fhir.uv.extensions.r5-5.2.0/package","/iris-shared/packages/full-ig/package"))
