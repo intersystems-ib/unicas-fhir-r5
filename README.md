@@ -35,7 +35,14 @@ This project implements FHIR R5 resources used for ÚNICAS for InterSystems FHIR
 * "hl7.fhir.uv.extensions.r5" : "5.2.0",
 * "hl7.fhir.uv.ips" : "1.1.0"
 There is a problem with the *hl7.fhir.uv.ips* importation, this package is only published for FHIR R4, if you try to import it into a R5 server you'll get a compatibility error, to allow the importation is required to remove that package from the dependences.
-The command for packages instalation is:
+The command for packages instalation is (WARNING!! PACKAGES NOT INCLUDED!!):
 ```
 do ##class(HS.FHIRMeta.Load.NpmLoader).importPackages($lb("/iris-shared/packages/hl7.terminology.r5-6.5.0/package", "/iris-shared/packages/hl7.fhir.uv.extensions.r5-5.2.0/package","/iris-shared/packages/full-ig/package"))
 ```
+
+## FHIR Repository
+* This project deployes a FHIR Repository and a namespace called FHIRSERVER, after the package import you've to configure the custom packages to be used for the repository. To manage all the requests from the interoperability production you've to include the business service **HS.FHIRServer.Interop.Service** and business operation **HS.FHIRServer.Interop.Operation**. As soon as you configure the FHIRSERVER production with you'll be able to define the FHIR Server Service Configuration:
+
+![image](https://github.com/intersystems-ib/unicas-fhir-r5/blob/main/images/fhir_server.png)
+
+Now, you are ready to implement your ÚNICAS project!
