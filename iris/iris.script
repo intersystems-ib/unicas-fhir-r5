@@ -16,5 +16,9 @@ Do ##class(HS.FHIRServer.Installer).InstallNamespace()
 Do ##class(HS.FHIRServer.Installer).InstallInstance(appKey, strategyClass, metadataConfigKey)
 
 set sc = $SYSTEM.OBJ.LoadDir("/opt/irisapp/src/Spain", "ck", , 1)
+// set version="latest" s r=##class(%Net.HttpRequest).%New(),r.Server="pm.community.intersystems.com",r.SSLConfiguration="ISC.FeatureTracker.SSL.Config" d r.Get("/packages/zpm/"_version_"/installer"),$system.OBJ.LoadStream(r.HttpResponse.Data,"c")
+// zpm "enable -community"
+// zpm "install spain-unicas"
 
 do ##class(HS.FHIRMeta.Load.NpmLoader).importPackages($lb("/iris-shared/packages/hl7.terminology.r5-6.5.0/package", "/iris-shared/packages/hl7.fhir.uv.extensions.r5-5.2.0/package","/iris-shared/packages/full-ig/package"))
+do ##class(HS.FHIR.DTL.Util.API.ExecDefinition).SetCustomDTLPackage("Spain.FHIR.DTL")

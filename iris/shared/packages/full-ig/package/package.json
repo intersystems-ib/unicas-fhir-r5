@@ -1,0 +1,22 @@
+{
+  "name" : "unicas-ig",
+  "version" : "0.0.1",
+  "tools-version" : 3,
+  "type" : "IG",
+  "date" : "20250812085018",
+  "license" : "CC0-1.0",
+  "canonical" : "https://unicas-fhir.sanidad.gob.es",
+  "notForPublication" : true,
+  "url" : "file://G:\\unicasag\\output",
+  "title" : "ÚNICAS Rare Diseases HL7 FHIR Implementation Guide",
+  "description" : "Esta guía describe cómo se definen la mensajería para el intercambio de datos en la red ÚNICAS. (built Tue, Aug 12, 2025 08:50+0200+02:00)",
+  "fhirVersions" : ["5.0.0"],
+  "dependencies" : {
+    "hl7.terminology.r5" : "6.5.0",
+    "hl7.fhir.uv.extensions.r5" : "5.2.0"
+  },
+  "directories" : {
+    "lib" : "package",
+    "example" : "example"
+  }
+}

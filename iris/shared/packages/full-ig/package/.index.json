@@ -1,0 +1,1008 @@
+{
+  "index-version" : 2,
+  "files" : [
+    {
+      "filename" : "ImplementationGuide-unicas-ig.json",
+      "resourceType" : "ImplementationGuide",
+      "id" : "unicas-ig",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ImplementationGuide/unicas-ig",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "CapabilityStatement-UNICASConfiguracionServidor.json",
+      "resourceType" : "CapabilityStatement",
+      "id" : "UNICASConfiguracionServidor",
+      "url" : "https://unicas-fhir.sanidad.gob.es/CapabilityStatement/UNICASConfiguracionServidor",
+      "version" : "0.0.1",
+      "kind" : "requirements"
+    },
+    {
+      "filename" : "CodeSystem-CodigosActividadesUNICAS.json",
+      "resourceType" : "CodeSystem",
+      "id" : "CodigosActividadesUNICAS",
+      "url" : "https://unicas-fhir.sanidad.gob.es/CodeSystem/CodigosActividadesUNICAS",
+      "version" : "0.0.1",
+      "content" : "complete"
+    },
+    {
+      "filename" : "CodeSystem-CodigosEventosUNICAS.json",
+      "resourceType" : "CodeSystem",
+      "id" : "CodigosEventosUNICAS",
+      "url" : "https://unicas-fhir.sanidad.gob.es/CodeSystem/CodigosEventosUNICAS",
+      "version" : "0.0.1",
+      "content" : "complete"
+    },
+    {
+      "filename" : "CodeSystem-CodigosMotivosBajaUNICAS.json",
+      "resourceType" : "CodeSystem",
+      "id" : "CodigosMotivosBajaUNICAS",
+      "url" : "https://unicas-fhir.sanidad.gob.es/CodeSystem/CodigosMotivosBajaUNICAS",
+      "version" : "0.0.1",
+      "content" : "complete"
+    },
+    {
+      "filename" : "CodeSystem-ExtEsSct.json",
+      "resourceType" : "CodeSystem",
+      "id" : "ExtEsSct",
+      "url" : "http://snomed.info/sct/900000001000122104",
+      "version" : "0.0.1",
+      "content" : "not-present"
+    },
+    {
+      "filename" : "CodeSystem-ExtEsSctRefSet900000151000122101.json",
+      "resourceType" : "CodeSystem",
+      "id" : "ExtEsSctRefSet900000151000122101",
+      "url" : "http://snomed.info/sct/900000001000122104?fhir_vs-refset/900000151000122101",
+      "version" : "0.0.1",
+      "content" : "not-present"
+    },
+    {
+      "filename" : "CodeSystem-ExtEsSctRefSet900000251000122107.json",
+      "resourceType" : "CodeSystem",
+      "id" : "ExtEsSctRefSet900000251000122107",
+      "url" : "http://snomed.info/sct/900000001000122104?fhir_vs-refset/900000251000122107",
+      "version" : "0.0.1",
+      "content" : "not-present"
+    },
+    {
+      "filename" : "CodeSystem-ExtEsSctRefSet900000311000122104.json",
+      "resourceType" : "CodeSystem",
+      "id" : "ExtEsSctRefSet900000311000122104",
+      "url" : "http://snomed.info/sct/900000001000122104?fhir_vs-refset/900000311000122104",
+      "version" : "0.0.1",
+      "content" : "not-present"
+    },
+    {
+      "filename" : "CodeSystem-ExtEsSctRefSet900000631000122100.json",
+      "resourceType" : "CodeSystem",
+      "id" : "ExtEsSctRefSet900000631000122100",
+      "url" : "http://snomed.info/sct/900000001000122104?fhir_vs-refset/900000631000122100",
+      "version" : "0.0.1",
+      "content" : "not-present"
+    },
+    {
+      "filename" : "ConceptMap-AlergiaConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "AlergiaConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/AlergiaConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-AntecedenteConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "AntecedenteConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/AntecedenteConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-CitaAgenda.json",
+      "resourceType" : "ConceptMap",
+      "id" : "CitaAgenda",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/CitaAgenda",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-DiagnosticoConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "DiagnosticoConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/DiagnosticoConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-DocumentReferenceUNICASConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "DocumentReferenceUNICASConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/DocumentReferenceUNICASConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-FormularioEnrolamientoConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "FormularioEnrolamientoConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/FormularioEnrolamientoConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-GestorProcesoConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "GestorProcesoConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/GestorProcesoConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-InmunizacionConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "InmunizacionConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/InmunizacionConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-InstitucionConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "InstitucionConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/InstitucionConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-InteraccionClinicaConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "InteraccionClinicaConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/InteraccionClinicaConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-MedicacionConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "MedicacionConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/MedicacionConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-ObjetivoProcesoConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "ObjetivoProcesoConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/ObjetivoProcesoConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-PatientConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "PatientConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/PatientConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-PrescripcionHospitalariaConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "PrescripcionHospitalariaConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/PrescripcionHospitalariaConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-ProfesionalSanitarioConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "ProfesionalSanitarioConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/ProfesionalSanitarioConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-RolProfesionalSanitarioConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "RolProfesionalSanitarioConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/RolProfesionalSanitarioConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ConceptMap-TareaProcesoConceptMap.json",
+      "resourceType" : "ConceptMap",
+      "id" : "TareaProcesoConceptMap",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ConceptMap/TareaProcesoConceptMap",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "StructureDefinition-AlergiaModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "AlergiaModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/AlergiaModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/AlergiaModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-AntecedenteModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "AntecedenteModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/AntecedenteModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/AntecedenteModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-CitaAgendaModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "CitaAgendaModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/CitaAgendaModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/CitaAgendaModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-DiagnosticoModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "DiagnosticoModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/DiagnosticoModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/DiagnosticoModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-DocumentReferenceUNICASModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "DocumentReferenceUNICASModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/DocumentReferenceUNICASModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/DocumentReferenceUNICASModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-FormularioEnrolamientoModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "FormularioEnrolamientoModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/FormularioEnrolamientoModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/FormularioEnrolamientoModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-GestorProcesoModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "GestorProcesoModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/GestorProcesoModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/GestorProcesoModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-InmunizacionModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "InmunizacionModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/InmunizacionModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/InmunizacionModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-InstitucionModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "InstitucionModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/InstitucionModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/InstitucionModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-InteraccionClinicaModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "InteraccionClinicaModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/InteraccionClinicaModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/InteraccionClinicaModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-MedicacionModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "MedicacionModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/MedicacionModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/MedicacionModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-ObjetivoProcesoModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "ObjetivoProcesoModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/ObjetivoProcesoModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/ObjetivoProcesoModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-PacienteModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "PacienteModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/PacienteModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/PacienteModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-PrescripcionHospitalariaModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "PrescripcionHospitalariaModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/PrescripcionHospitalariaModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/PrescripcionHospitalariaModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-ProfesionalSanitarioModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "ProfesionalSanitarioModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/ProfesionalSanitarioModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/ProfesionalSanitarioModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-RolProfesionalSanitarioModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "RolProfesionalSanitarioModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/RolProfesionalSanitarioModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/RolProfesionalSanitarioModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-TareaProcesoModeloLogico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "TareaProcesoModeloLogico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/TareaProcesoModeloLogico",
+      "version" : "0.0.1",
+      "kind" : "logical",
+      "type" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/TareaProcesoModeloLogico",
+      "derivation" : "specialization"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASAllergyIntolerance.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASAllergyIntolerance",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASAllergyIntolerance",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "AllergyIntolerance",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASAppointment.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASAppointment",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASAppointment",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Appointment",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASBinary.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASBinary",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASBinary",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Binary",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASBundleAlergias.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASBundleAlergias",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASBundleAlergias",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Bundle",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASBundleAntecedentes.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASBundleAntecedentes",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASBundleAntecedentes",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Bundle",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASBundleCitasAgenda.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASBundleCitasAgenda",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASBundleCitasAgenda",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Bundle",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASBundleDiagnosticos.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASBundleDiagnosticos",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASBundleDiagnosticos",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Bundle",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASBundleDocumentos.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASBundleDocumentos",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASBundleDocumentos",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Bundle",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASBundleInmunizaciones.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASBundleInmunizaciones",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASBundleInmunizaciones",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Bundle",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASBundlePrescripcionesHospitalarias.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASBundlePrescripcionesHospitalarias",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASPrescripcionesHospitalarias",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Bundle",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASCarePlan.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASCarePlan",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASCarePlan",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "CarePlan",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASConditionDiagnostico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASConditionDiagnostico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASConditionDiagnostico",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Condition",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASConditionEnfermedad.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASConditionEnfermedad",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASConditionEnfermedad",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Condition",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASDiagnosticReport.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASDiagnosticReport",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASDiagnosticReport",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "DiagnosticReport",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASDocumentReference.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASDocumentReference",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASDocumentReference",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "DocumentReference",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASEncounter.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASEncounter",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASEncounter",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Encounter",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASEndpoint.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASEndpoint",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASEndpoint",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Endpoint",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASFamilyMemberHistory.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASFamilyMemberHistory",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASFamilyMemberHistory",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "FamilyMemberHistory",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASGoal.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASGoal",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASGoal",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Goal",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASImmunization.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASImmunization",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASImmunization",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Immunization",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASLocation.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASLocation",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASLocation",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Location",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASMedication.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASMedication",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASMedication",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Medication",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASMedicationAdministration.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASMedicationAdministration",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASMedicationAdministration",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "MedicationAdministration",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASMedicationStatement.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASMedicationStatement",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASMedicationStatement",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "MedicationStatement",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASObservationAntropometria.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASObservationAntropometria",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASObservationAntropometria",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Observation",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASObservationHabitoNoSaludable.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASObservationHabitoNoSaludable",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASObservationHabitoNoSaludable",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Observation",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASObservationHabitoToxico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASObservationHabitoToxico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASObservationHabitoToxico",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Observation",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASObservationObstetrico.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASObservationObstetrico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASObservationObstetrico",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Observation",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASOrganization.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASOrganization",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASOrganization",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Organization",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASPatient.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASPatient",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASPatient",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Patient",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASPractitioner.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASPractitioner",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASPractitioner",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Practitioner",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASPractitionerRole.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASPractitionerRole",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASPractitionerRole",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "PractitionerRole",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASProcedure.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASProcedure",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASProcedure",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Procedure",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-UNICASTask.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "UNICASTask",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/UNICASTask",
+      "version" : "0.0.1",
+      "kind" : "resource",
+      "type" : "Task",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-extension-edad-paciente.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "extension-edad-paciente",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/EdadPaciente",
+      "version" : "0.0.1",
+      "kind" : "complex-type",
+      "type" : "Extension",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-extension-estado-enrolamiento-paciente.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "extension-estado-enrolamiento-paciente",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/EstadoEnrolamientoPaciente",
+      "version" : "0.0.1",
+      "kind" : "complex-type",
+      "type" : "Extension",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-extension-nodo-ccaa.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "extension-nodo-ccaa",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/NodoCCAA",
+      "version" : "0.0.1",
+      "kind" : "complex-type",
+      "type" : "Extension",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-extension-numero-colegiado-profesional-sanitario.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "extension-numero-colegiado-profesional-sanitario",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/NumeroColegiadoProfesionalSanitario",
+      "version" : "0.0.1",
+      "kind" : "complex-type",
+      "type" : "Extension",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "StructureDefinition-extension-provincia.json",
+      "resourceType" : "StructureDefinition",
+      "id" : "extension-provincia",
+      "url" : "https://unicas-fhir.sanidad.gob.es/StructureDefinition/Provincia",
+      "version" : "0.0.1",
+      "kind" : "complex-type",
+      "type" : "Extension",
+      "derivation" : "constraint"
+    },
+    {
+      "filename" : "ValueSet-ActividadesUNICAS.json",
+      "resourceType" : "ValueSet",
+      "id" : "ActividadesUNICAS",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/ActividadesUNICAS",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-AgenteCausal.json",
+      "resourceType" : "ValueSet",
+      "id" : "AgenteCausal",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/AgenteCausal",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-CanalesCita.json",
+      "resourceType" : "ValueSet",
+      "id" : "CanalesCita",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/CanalesCita",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-CategoriasProfesionales.json",
+      "resourceType" : "ValueSet",
+      "id" : "CategoriasProfesionales",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/CategoriasProfesionales",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-ClasificacionesDiagnosticos.json",
+      "resourceType" : "ValueSet",
+      "id" : "ClasificacionesDiagnosticos",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/ClasificacionesDiagnosticos",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-CriteriosSospechaDiagnosticos.json",
+      "resourceType" : "ValueSet",
+      "id" : "CriteriosSospechaDiagnosticos",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/CriteriosSospechaDiagnosticos",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-DatosAntropometricos.json",
+      "resourceType" : "ValueSet",
+      "id" : "DatosAntropometricos",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/DatosAntropometricos",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-Diagnosticos.json",
+      "resourceType" : "ValueSet",
+      "id" : "Diagnosticos",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/Diagnosticos",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-Enfermedades.json",
+      "resourceType" : "ValueSet",
+      "id" : "Enfermedades",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/Enfermedades",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-EventosUNICAS.json",
+      "resourceType" : "ValueSet",
+      "id" : "EventosUNICAS",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/EventosUNICAS",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-Farmacos.json",
+      "resourceType" : "ValueSet",
+      "id" : "Farmacos",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/Farmacos",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-FormasFarmaceuticas.json",
+      "resourceType" : "ValueSet",
+      "id" : "FormasFarmaceuticas",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/FormasFarmaceuticas",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-GradosParentescoHereditario.json",
+      "resourceType" : "ValueSet",
+      "id" : "GradosParentescoHereditario",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/GradosParentescoHereditario",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-GradosSospechaDiagnostico.json",
+      "resourceType" : "ValueSet",
+      "id" : "GradosSospechaDiagnostico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/GradosSospechaDiagnostico",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-HabitosYPatronesConsumo.json",
+      "resourceType" : "ValueSet",
+      "id" : "HabitosYPatronesConsumo",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/HabitosYPatronesConsumo",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-IdentificadoresNodoCCAA.json",
+      "resourceType" : "ValueSet",
+      "id" : "IdentificadoresNodoCCAA",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/IdentificadoresNodoCCAA",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-InformacionesUNICAS.json",
+      "resourceType" : "ValueSet",
+      "id" : "InformacionesUNICAS",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/TiposInformacionesUNICAS",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-LocalizacionesAnatomicas.json",
+      "resourceType" : "ValueSet",
+      "id" : "LocalizacionesAnatomicas",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/LocalizacionesAnatomicas",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-ManifestacionesClinicas.json",
+      "resourceType" : "ValueSet",
+      "id" : "ManifestacionesClinicas",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/ManifestacionesClinicas",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-MotivosBajaUNICAS.json",
+      "resourceType" : "ValueSet",
+      "id" : "MotivosBajaUNICAS",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/MotivosBajaUNICAS",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-MotivosCita.json",
+      "resourceType" : "ValueSet",
+      "id" : "MotivosCita",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/MotivosCita",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-MotivosVacunacion.json",
+      "resourceType" : "ValueSet",
+      "id" : "MotivosVacunacion",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/MotivosVacunacion",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-Obstetricos.json",
+      "resourceType" : "ValueSet",
+      "id" : "Obstetricos",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/Obstetricos",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-ProcedenciaInteraccionClinica.json",
+      "resourceType" : "ValueSet",
+      "id" : "ProcedenciaInteraccionClinica",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/ProcedenciaInteraccionClinica",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-ProcedimientoQuirurgico.json",
+      "resourceType" : "ValueSet",
+      "id" : "ProcedimientoQuirurgico",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/ProcedimientoQuirurgico",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-Sustancias.json",
+      "resourceType" : "ValueSet",
+      "id" : "Sustancias",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/Sustancias",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-TipoAltaInteraccionClinica.json",
+      "resourceType" : "ValueSet",
+      "id" : "TipoAltaInteraccionClinica",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/TipoAltaInteraccionClinica",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-TiposDiagnosticos.json",
+      "resourceType" : "ValueSet",
+      "id" : "TiposDiagnosticos",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/TiposDiagnosticos",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-TiposDocumentosIdentificacionPersona.json",
+      "resourceType" : "ValueSet",
+      "id" : "TiposDocumentosIdentificacionPersona",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/TiposDocumentosIdentificacionPersona",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-TiposInformesUNICAS.json",
+      "resourceType" : "ValueSet",
+      "id" : "TiposInformesUNICAS",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/TiposInformesUNICAS",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-TiposRelacionesPersonaContacto.json",
+      "resourceType" : "ValueSet",
+      "id" : "TiposRelacionesPersonaContacto",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/TiposRelacionesPersonaContacto",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-TiposServicios.json",
+      "resourceType" : "ValueSet",
+      "id" : "TiposServicios",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/TiposServicios",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-Vacunas.json",
+      "resourceType" : "ValueSet",
+      "id" : "Vacunas",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/Vacunas",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-ViasAdministracionFarmacologica.json",
+      "resourceType" : "ValueSet",
+      "id" : "ViasAdministracionFarmacologica",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/ViasAdministracionFarmacologica",
+      "version" : "0.0.1"
+    },
+    {
+      "filename" : "ValueSet-ViasAdministracionVacunacion.json",
+      "resourceType" : "ValueSet",
+      "id" : "ViasAdministracionVacunacion",
+      "url" : "https://unicas-fhir.sanidad.gob.es/ValueSet/ViasAdministracionVacunacion",
+      "version" : "0.0.1"
+    }
+  ]
+}
