@@ -5853,53 +5853,167 @@ ClassMethod SPM()
  do ..write(cr_"</Specimen>")
 }
 
-ClassMethod TQ1()
+ClassMethod TQ1(mode As %String)
 {
 
- // PP - need to make a new order for each of these (except the first)	
-	
  $$$GetFollowing("TQ1")
  #if $$$HSDebug
 	do ##class(HS.Util.HSDebug).Debug("TQ1","HS.Gateway.HL7.HL7ToSDA3","txt",s)
  #endif
 
- #; TQ1-2 : Quantity  (see ORC-7.1, OBR-27.1)
- do ..write(cr_"<OrderQuantity>"_$$$TQ1QuantityQuantity_"</OrderQuantity>")
-
- #; TQ1-3 : RepeatPattern
- set %occ="" for {
-	set %occ=$$$TQ1RepeatPattern(%occ) quit:%occ=""
-	do ..write(cr_"<Frequency>") 
-	do ..write(cr_"<Code>"_$$$TQ1RepeatPatternRepeatPatternCodeIdentifier(%occ)_"</Code>")
-	do ..write(cr_"<Description>"_$$$TQ1RepeatPatternRepeatPatternCodeText(%occ)_"</Description>")
-	do ..write(cr_"<Factor>"_$$$TQ1RepeatPatternPeriodQuantity(%occ)_"</Factor>")
-	do ..write(cr_"</Frequency>")
-	quit  // only one
+ if mode = "vxu"{
+	#; TQ1-10 : Conditiontext  (see ORC-7.7, OBR-27.7)
+ 	do ..write(cr_"<Condition>"_$$$TQ1Conditiontext_"</Condition>")
  }
 
+ if (mode = "rde") || (mode = "omp") || (mode = "med") {
+	do ..write(cr_"<DosageSteps>")
+
+	set rxeIndex = 0
+	if $d(^||HS.Data("RXE")) {
+		set save = ^||HS.Data("RXE")
+		set ^||HS.Data("RXE") = 0
+		
+		set rxeIndex = $$$Next("RXE")
+		set ^||HS.Data("RXE") = save
+	}
+
+ 	#; TQ1-3 : Repeat Pattern
+ 	#; Each repetition of repeat pattern will have it's own DosageStep
+	#; Repetitions of repeat patterns assumed here to be concurrent steps
+
+	set tFound=0,tSequence=1
+ 	set %occ="" for {
+		set %occ=$$$TQ1RepeatPattern(%occ) quit:%occ=""
+		set tFound=1
+		do ..write(cr_"<DosageStep>")
+		do ..write(cr_"<Conjunction>"_$$$TQ1Conjunction_"</Conjunction>")
+		do ..write(cr_"<Sequence>"_tSequence_"</Sequence>")
+		do ..TQ1DosageProps(%occ)
+		if rxeIndex {
+			do ..RXEInstruction(rxeIndex)
+		}
+		do ..write(cr_"</DosageStep>")
+	} 
+
+ 	#; If no repeat pattern found, create a dosage step with no repeat pattern
+	if 'tFound {
+		do ..write(cr_"<DosageStep>")
+		do ..write(cr_"<Conjunction>"_$$$TQ1Conjunction_"</Conjunction>")
+		do ..write(cr_"<Sequence>"_tSequence_"</Sequence>")
+		do ..TQ1DosageProps()
+		if rxeIndex {
+			do ..RXEInstruction(rxeIndex)
+		}
+		do ..write(cr_"</DosageStep>")
+	}
+
+	while ($$$IsFollowing("TQ1")) {
+		$$$GetFollowing("TQ1")
+		set tFound=0
+		If $$$TQ1Conjunction'="A" { 
+			set tSequence=$I(tSequence)
+		}
+ 		set %occ="" for {
+			set %occ=$$$TQ1RepeatPattern(%occ) quit:%occ=""
+			set tFound=1
+			do ..write(cr_"<DosageStep>")
+			do ..write(cr_"<Conjunction>"_$$$TQ1Conjunction_"</Conjunction>")
+			do ..write(cr_"<Sequence>"_tSequence_"</Sequence>")
+			do ..TQ1DosageProps(%occ)
+			if rxeIndex {
+				do ..RXEInstruction(rxeIndex)
+			}
+			do ..write(cr_"</DosageStep>")
+		}
+		#; If no repeat pattern found, just create a dosage step with no repeat pattern
+		If 'tFound {
+			do ..write(cr_"<DosageStep>")
+			do ..write(cr_"<Conjunction>"_$$$TQ1Conjunction_"</Conjunction>")
+			do ..write(cr_"<Sequence>"_tSequence_"</Sequence>")
+			do ..TQ1DosageProps()
+			if rxeIndex {
+				do ..RXEInstruction(rxeIndex)
+			}
+			do ..write(cr_"</DosageStep>")
+		}
+	}
+	
+	do ..write(cr_"</DosageSteps>")
+ } else {
+	do ..TQ1DosageProps()
+ }
+}
+
+ClassMethod TQ1DosageProps(occ As %Numeric = 0)
+{
+
+ #; TQ1-2 : Dose Quantity
+ If $$$TQ1QuantityQuantity'="" {
+     do ..write(cr_"<DoseQuantity>"_$$$TQ1QuantityQuantity_"</DoseQuantity>")
+     If $$$TQ1QuantityUnitsIdentifier_$$$TQ1QuantityUnitsText'="" {
+        do ..write(cr_"<DoseUoM>")
+        do ..write(cr_"<Code>"_$$$TQ1QuantityUnitsIdentifier_"</Code>")
+        do ..write(cr_"<Description>"_$$$TQ1QuantityUnitsText_"</Description>")
+        do ..write(cr_"<SDACodingStandard>"_$$$TQ1QuantityUnitsNameofCodingSystem_"</SDACodingStandard>")
+        do ..write(cr_"</DoseUoM>")
+     }
+ }
+ #; TQ1-3 : RepeatPattern
+ If occ {
+    If $$$TQ1RepeatPatternIdentifier(occ)_$$$TQ1RepeatPatternText(occ)'="" {
+        do ..write(cr_"<Frequency>")
+        do ..write(cr_"<Code>"_$$$TQ1RepeatPatternIdentifier(occ)_"</Code>")
+        do ..write(cr_"<Description>"_$$$TQ1RepeatPatternText(occ)_"</Description>")
+        do ..write(cr_"<SDACodingStandard>"_$$$TQ1RepeatPatternNameofCodingSystem(occ)_"</SDACodingStandard>")
+        do ..write(cr_"<Factor>"_$$$TQ1RepeatPatternPeriodQuantity(occ)_"</Factor>")
+        do ..write(cr_"</Frequency>")
+    }
+ }
+  
+ #; TQ1-4 : ExplicitTimes
+ New tFound,%occ
+ set tFound=0
+ set %occ="" for {
+    set %occ=$$$TQ1ExplicitTimes(%occ) quit:%occ=""
+    If $$$TQ1ExplicitTime(%occ)'="" {
+        If %occ=1 set tFound=1 do ..write(cr_"<ExplicitTimes>")
+        do ..write(cr_"<ExplicitTime>")
+		do ..write(cr_"<Value>"_$$$TQ1ExplicitTime(%occ)_"</Value>")
+		do ..write(cr_"</ExplicitTime>")
+    }
+ }
+ if tFound do ..write(cr_"</ExplicitTimes>")
+
+ #; TQ1-5 : RelativeTimes
+ set tFound=0
+ set %occ="" for {
+    set %occ=$$$TQ1RelativeTimes(%occ) quit:%occ=""
+    If %occ=1 set tFound=1 do ..write(cr_"<RelativeTimes>")
+    If $$$TQ1RelativeTimeQuantity(%occ) '="" {
+        do ..write(cr_"<RelativeTime>")
+        do ..write(cr_"<Value>"_$$$TQ1RelativeTimeQuantity(%occ)_"</Value>")
+        If $$$TQ1RelativeTimeUnitsIdentifier(%occ)_$$$TQ1RelativeTimeUnitsText(%occ)'="" {
+            do ..write(cr_"<UnitOfMeasure>")
+            do ..write(cr_"<Code>"_$$$TQ1RelativeTimeUnitsIdentifier(%occ)_"</Code>")
+            do ..write(cr_"<Description>"_$$$TQ1RelativeTimeUnitsText(%occ)_"</Description>")
+            do ..write(cr_"<SDACodingStandard>"_$$$TQ1RelativeTimeUnitsNameofCodingSystem(%occ)_"</SDACodingStandard>")
+            do ..write(cr_"</UnitOfMeasure>")
+        }
+        do ..write(cr_"</RelativeTime>")
+    }
+ }
+ if tFound do ..write(cr_"</RelativeTimes>")
+
  #; TQ1-6 : ServiceDuration
- set quan=$$$TQ1ServiceDurationQuantity
- set code=$$$TQ1ServiceDurationUnitsIdentifier
- set desc=$$$TQ1ServiceDurationUnitsText
- if quan_code_desc '="" {  // |quan^code&desc|
-	set factor=""
-	if quan'="" {
-		if code_desc="" set code=quan						// e.g. |Daily|		= |1^Daily&Daily|
-		set factor=$s(+quan:+quan,1:"")						// e.g. |2 Days|	= |2^2 Days&2 Days|
-		if +quan,'+code set code=+quan_code					// e.g. |2^D|		= |2^2D&2D|
-		if +quan,$l(desc),'+desc set desc=+quan_" "_desc	// e.g. |2^D&Days|	= |2^2D&2 Days|
-	}
-	else {
-		if +code {set factor=+code}  						// e.g. |^2D|		= |2^2D&2D|
-		elseif +desc {set factor=+desc}  					// e.g. |^&3W|		= |3^3W&3W|
-	}
-	do ..write(cr_"<Duration>")
-	do ..write(cr_"<Code>"_code_"</Code>")
-	do ..write(cr_"<Description>"_desc_"</Description>")
-	do ..write(cr_"<Factor>"_factor_"</Factor>")
-	do ..write(cr_"</Duration>")
- } 
- kill quan,code,desc,factor
+ do ..write(cr_"<Duration>")
+ do ..write(cr_"<Code>"_$$$TQ1ServiceDurationQuantity_"</Code>")
+ do ..write(cr_"</Duration>")
+ do ..write(cr_"<DurationUOM>")
+ do ..write(cr_"<Code>"_$$$TQ1ServiceDurationUnitsIdentifier_"</Code>")
+ do ..write(cr_"<Description>"_$$$TQ1ServiceDurationUnitsText_"</Description>")
+ do ..write(cr_"<SDACodingStandard>"_$$$TQ1ServiceDurationUnitsNameofCodingSystem_"</SDACodingStandard>")
+ do ..write(cr_"</DurationUOM>")
  
  #; TQ1-7 : Startdatetime  (see ORC-7.4, OBR-27.4, OBR-6)
  do ..write(cr_"<FromTime>"_..xmltimestamp($$$TQ1StartdatetimeTime)_"</FromTime>")
@@ -5908,21 +6022,38 @@ ClassMethod TQ1()
  do ..write(cr_"<ToTime>"_..xmltimestamp($$$TQ1EnddatetimeTime)_"</ToTime>")
 
  #; TQ1-9 : Priority  (see ORC-7.6, OBR-27.6)
+ set tFound = 0
  set %occ="" for {
-	set %occ=$$$TQ1Priority(%occ) quit:%occ=""
-	do ..write(cr_"<Priority>")
-	do ..write(cr_"<SDACodingStandard>"_$$$TQ1PriorityNameofCodingSystem(%occ)_"</SDACodingStandard>")
-	do ..write(cr_"<Code>"_$$$TQ1PriorityIdentifier(%occ)_"</Code>")
-	do ..write(cr_"<Description>"_$$$TQ1PriorityText(%occ)_"</Description>")
-	do ..write(cr_"</Priority>")
-	quit  // only one
+    set %occ=$$$TQ1Priority(%occ) quit:%occ=""
+    If %occ=1 set tFound=1 do ..write(cr_"<Priorities>")
+    do ..write(cr_"<Priority>")
+    do ..write(cr_"<Code>"_$$$TQ1PriorityIdentifier(%occ)_"</Code>")
+    do ..write(cr_"<Description>"_$$$TQ1PriorityText(%occ)_"</Description>")
+    do ..write(cr_"<SDACodingStandard>"_$$$TQ1PriorityNameofCodingSystem(%occ)_"</SDACodingStandard>")
+    do ..write(cr_"</Priority>")
  }
+ if tFound do ..write(cr_"</Priorities>")
 
  #; TQ1-10 : Conditiontext  (see ORC-7.7, OBR-27.7)
- do ..write(cr_"<Condition>"_$$$TQ1Conditiontext_"</Condition>")
+ do ..write(cr_"<ConditionText>"_$$$TQ1Conditiontext_"</ConditionText>")
 
  #; TQ1-11 : Textinstruction  (see ORC-7.8, OBR-27.8)
  do ..write(cr_"<TextInstruction>"_$$$TQ1Textinstruction_"</TextInstruction>")
+
+ #; TQ1-12 : Conjunction (see TQ1 method)
+
+ #; TQ1-13 : Occurrence Duration
+ do ..write(cr_"<OccDurationQuantity>")
+ do ..write(cr_"<Code>"_$$$TQ1OccDurationQuantity_"</Code>")
+ do ..write(cr_"</OccDurationQuantity>")
+ do ..write(cr_"<OccDurationUOM>")
+ do ..write(cr_"<Code>"_$$$TQ1OccDurationUnitsIdentifier_"</Code>")
+ do ..write(cr_"<Description>"_$$$TQ1OccDurationUnitsText_"</Description>")
+ do ..write(cr_"<SDACodingStandard>"_$$$TQ1OccDurationUnitsNameofCodingSystem_"</SDACodingStandard>")
+ do ..write(cr_"</OccDurationUOM>")
+
+ #; TQ1-14 : Total Occurrences
+ do ..write(cr_"<TotalOccurrences>"_$$$TQ1TotalOccurrences_"</TotalOccurrences>")
 }
 
 ClassMethod TXA()
