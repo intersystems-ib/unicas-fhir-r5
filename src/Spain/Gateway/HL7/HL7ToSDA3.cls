@@ -5870,8 +5870,8 @@ ClassMethod TQ1()
  set %occ="" for {
 	set %occ=$$$TQ1RepeatPattern(%occ) quit:%occ=""
 	do ..write(cr_"<Frequency>") 
-	do ..write(cr_"<Code>"_$$$TQ1RepeatPatternRepeatPatternCodeIdentifier(%occ)_"</Code>")
-	do ..write(cr_"<Description>"_$$$TQ1RepeatPatternRepeatPatternCodeText(%occ)_"</Description>")
+	do ..write(cr_"<Code>"_$$$TQ1RepeatPatternIdentifier(%occ)_"</Code>")
+		do ..write(cr_"<Description>"_$$$TQ1RepeatPatternText(%occ)_"</Description>")
 	do ..write(cr_"<Factor>"_$$$TQ1RepeatPatternPeriodQuantity(%occ)_"</Factor>")
 	do ..write(cr_"</Frequency>")
 	quit  // only one
