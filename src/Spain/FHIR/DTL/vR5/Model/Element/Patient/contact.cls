@@ -18,12 +18,12 @@ Property period As HS.FHIR.DTL.vR4.Model.Datatype.Period(XMLNAME = "period", XML
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "contact";
+Parameter XMLNAME = "Patient.contact";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "contact";
+Parameter XMLTYPE = "Patient.contact";
 
 }

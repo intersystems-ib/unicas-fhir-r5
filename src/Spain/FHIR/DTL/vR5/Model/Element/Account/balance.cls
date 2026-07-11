@@ -12,12 +12,12 @@ Property amount As HS.FHIR.DTL.vR4.Model.Datatype.Money(XMLNAME = "amount", XMLP
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "balance";
+Parameter XMLNAME = "Account.balance";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "balance";
+Parameter XMLTYPE = "Account.balance";
 
 }

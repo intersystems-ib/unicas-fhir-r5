@@ -8,12 +8,12 @@ Property preferred As %Boolean(XMLNAME = "preferred", XMLPROJECTION = "ATTRIBUTE
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "communication";
+Parameter XMLNAME = "Patient.communication";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "communication";
+Parameter XMLTYPE = "Patient.communication";
 
 }

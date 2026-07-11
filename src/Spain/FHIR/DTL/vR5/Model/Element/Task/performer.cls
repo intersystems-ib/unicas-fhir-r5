@@ -8,12 +8,12 @@ Property actor As HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "actor", XMLPRO
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "performer";
+Parameter XMLNAME = "Task.performer";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "performer";
+Parameter XMLTYPE = "Task.performer";
 
 }

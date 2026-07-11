@@ -26,12 +26,12 @@ Property fastingStatusDuration As HS.FHIR.DTL.vR4.Model.Datatype.Duration(XMLNAM
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "collection";
+Parameter XMLNAME = "Specimen.collection";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "collection";
+Parameter XMLTYPE = "Specimen.collection";
 
 }

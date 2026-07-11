@@ -20,12 +20,12 @@ Property exception As list Of Spain.FHIR.DTL.vR5.Model.Element.Coverage.exceptio
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "costToBeneficiary";
+Parameter XMLNAME = "Coverage.costToBeneficiary";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "costToBeneficiary";
+Parameter XMLTYPE = "Coverage.costToBeneficiary";
 
 }

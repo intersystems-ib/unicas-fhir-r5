@@ -16,12 +16,12 @@ Property device As list Of HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "devic
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "procedure";
+Parameter XMLNAME = "Account.procedure";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "procedure";
+Parameter XMLTYPE = "Account.procedure";
 
 }

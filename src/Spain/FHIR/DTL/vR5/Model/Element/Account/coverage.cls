@@ -8,12 +8,12 @@ Property priority As %Integer(XMLNAME = "priority", XMLPROJECTION = "ATTRIBUTE")
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "coverage";
+Parameter XMLNAME = "Account.coverage";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "coverage";
+Parameter XMLTYPE = "Account.coverage";
 
 }

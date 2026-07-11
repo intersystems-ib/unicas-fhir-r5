@@ -8,12 +8,12 @@ Property reference As HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "reference"
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "data";
+Parameter XMLNAME = "Consent.data";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "data";
+Parameter XMLTYPE = "Consent.data";
 
 }

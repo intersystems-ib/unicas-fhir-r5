@@ -8,12 +8,12 @@ Property account As HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "account", XM
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "relatedAccount";
+Parameter XMLNAME = "Account.relatedAccount";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "relatedAccount";
+Parameter XMLTYPE = "Account.relatedAccount";
 
 }

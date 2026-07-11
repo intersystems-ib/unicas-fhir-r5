@@ -8,12 +8,12 @@ Property instructionReference As HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = 
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "patientInstruction";
+Parameter XMLNAME = "ServiceRequest.patientInstruction";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "patientInstruction";
+Parameter XMLTYPE = "ServiceRequest.patientInstruction";
 
 }

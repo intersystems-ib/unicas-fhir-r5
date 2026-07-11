@@ -14,12 +14,12 @@ Property timePeriod As HS.FHIR.DTL.vR4.Model.Datatype.Period(XMLNAME = "timePeri
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "processing";
+Parameter XMLNAME = "Specimen.processing";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "processing";
+Parameter XMLTYPE = "Specimen.processing";
 
 }

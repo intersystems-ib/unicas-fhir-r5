@@ -24,12 +24,12 @@ Property dueDuration As HS.FHIR.DTL.vR4.Model.Datatype.Duration(XMLNAME = "dueDu
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "target";
+Parameter XMLNAME = "Goal.target";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "target";
+Parameter XMLTYPE = "Goal.target";
 
 }

@@ -8,12 +8,12 @@ Property parameter As list Of Spain.FHIR.DTL.vR5.Model.Element.ServiceRequest.pa
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "orderDetail";
+Parameter XMLNAME = "ServiceRequest.orderDetail";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "orderDetail";
+Parameter XMLTYPE = "ServiceRequest.orderDetail";
 
 }

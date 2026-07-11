@@ -119,7 +119,7 @@ Property renderedDossageInstruction As %String(MAXLEN = 1000000, XMLNAME = "rend
 /// Dosage
 /// <p>
 /// Details of how medication is/was taken or should be taken.
-Property dosage As list Of HS.FHIR.DTL.vR4.Model.Element.Dosage(XMLNAME = "dosage", XMLPROJECTION = "ELEMENT");
+Property dosage As list Of Spain.FHIR.DTL.vR5.Model.Element.Dosage(XMLNAME = "dosage", XMLPROJECTION = "ELEMENT");
 
 /// Adherence
 /// <p>

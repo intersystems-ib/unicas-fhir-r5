@@ -10,12 +10,12 @@ Property contentCodeableConcept As HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcep
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "payload";
+Parameter XMLNAME = "Communication.payload";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "payload";
+Parameter XMLTYPE = "Communication.payload";
 
 }

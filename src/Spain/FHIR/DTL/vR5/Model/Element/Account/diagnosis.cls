@@ -16,12 +16,12 @@ Property packageCode As list Of HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept(X
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "diagnosis";
+Parameter XMLNAME = "Account.diagnosis";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "diagnosis";
+Parameter XMLTYPE = "Account.diagnosis";
 
 }

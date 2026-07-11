@@ -14,12 +14,12 @@ Property coverageTiming As HS.FHIR.DTL.vR4.Model.Datatype.Timing(XMLNAME = "cove
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "participant";
+Parameter XMLNAME = "CareTeam.participant";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "participant";
+Parameter XMLTYPE = "CareTeam.participant";
 
 }

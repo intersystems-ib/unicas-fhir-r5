@@ -8,12 +8,12 @@ Property link As HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "link", XMLPROJE
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "media";
+Parameter XMLNAME = "DiagnosticReport.media";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "media";
+Parameter XMLTYPE = "DiagnosticReport.media";
 
 }

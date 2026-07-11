@@ -10,12 +10,12 @@ Property period As HS.FHIR.DTL.vR4.Model.Datatype.Period(XMLNAME = "period", XML
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "guarantor";
+Parameter XMLNAME = "Account.guarantor";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "guarantor";
+Parameter XMLTYPE = "Account.guarantor";
 
 }

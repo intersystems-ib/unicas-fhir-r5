@@ -8,12 +8,12 @@ Property reference As HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "reference"
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "supportingInfo";
+Parameter XMLNAME = "DiagnosticReport.supportingInfo";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "supportingInfo";
+Parameter XMLTYPE = "DiagnosticReport.supportingInfo";
 
 }

@@ -10,12 +10,12 @@ Property party As HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "party", XMLPRO
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "attester";
+Parameter XMLNAME = "Composition.attester";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "attester";
+Parameter XMLTYPE = "Composition.attester";
 
 }

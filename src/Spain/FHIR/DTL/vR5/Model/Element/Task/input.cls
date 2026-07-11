@@ -104,18 +104,18 @@ Property valueTriggerDefinition As HS.FHIR.DTL.vR4.Model.Datatype.TriggerDefinit
 
 Property valueUsageContext As HS.FHIR.DTL.vR4.Model.Datatype.UsageContext(XMLNAME = "valueUsageContext", XMLPROJECTION = "ELEMENT");
 
-Property valueDosage As HS.FHIR.DTL.vR4.Model.Datatype.Dosage(XMLNAME = "valueDosage", XMLPROJECTION = "ELEMENT");
+Property valueDosage As Spain.FHIR.DTL.vR5.Model.Element.Dosage(XMLNAME = "valueDosage", XMLPROJECTION = "ELEMENT");
 
 Property valueMeta As HS.FHIR.DTL.vR4.Model.Base.Meta(XMLNAME = "valueMeta", XMLPROJECTION = "ELEMENT");
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "input";
+Parameter XMLNAME = "Task.input";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "input";
+Parameter XMLTYPE = "Task.input";
 
 }

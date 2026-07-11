@@ -14,12 +14,12 @@ Property item As list Of Spain.FHIR.DTL.vR5.Model.Element.QuestionnaireResponse.
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "item";
+Parameter XMLNAME = "QuestionnaireResponse.item";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "item";
+Parameter XMLTYPE = "QuestionnaireResponse.item";
 
 }

@@ -8,12 +8,12 @@ Property detail As list Of Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference(X
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "event";
+Parameter XMLNAME = "Composition.event";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "event";
+Parameter XMLTYPE = "Composition.event";
 
 }

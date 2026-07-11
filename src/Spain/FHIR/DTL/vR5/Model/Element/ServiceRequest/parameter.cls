@@ -20,12 +20,12 @@ Property valuePeriod As HS.FHIR.DTL.vR4.Model.Datatype.Period(XMLNAME = "valuePe
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "parameter";
+Parameter XMLNAME = "ServiceRequest.parameter";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "parameter";
+Parameter XMLTYPE = "ServiceRequest.parameter";
 
 }

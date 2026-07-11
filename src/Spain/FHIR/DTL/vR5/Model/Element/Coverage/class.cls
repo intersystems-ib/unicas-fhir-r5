@@ -10,12 +10,12 @@ Property name As %String(MAXLEN = 1000000, XMLNAME = "name", XMLPROJECTION = "AT
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "class";
+Parameter XMLNAME = "Coverage.class";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "class";
+Parameter XMLTYPE = "Coverage.class";
 
 }

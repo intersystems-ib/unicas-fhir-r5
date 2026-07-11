@@ -8,12 +8,12 @@ Property comment As %String(MAXLEN = 1000000, XMLNAME = "comment", XMLPROJECTION
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "eligibility";
+Parameter XMLNAME = "HealthcareService.eligibility";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "eligibility";
+Parameter XMLTYPE = "HealthcareService.eligibility";
 
 }

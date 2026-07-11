@@ -14,12 +14,12 @@ Property verificationDate As list Of %String(MAXLEN = 1000000, XMLNAME = "verifi
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "verification";
+Parameter XMLNAME = "Consent.verification";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "verification";
+Parameter XMLTYPE = "Consent.verification";
 
 }

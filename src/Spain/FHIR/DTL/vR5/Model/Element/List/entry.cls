@@ -12,12 +12,12 @@ Property item As HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "item", XMLPROJE
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "entry";
+Parameter XMLNAME = "List.entry";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "entry";
+Parameter XMLTYPE = "List.entry";
 
 }

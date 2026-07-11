@@ -8,12 +8,12 @@ Property use As HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept(XMLNAME = "use", 
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "diagnosis";
+Parameter XMLNAME = "EpisodeOfCare.diagnosis";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "diagnosis";
+Parameter XMLTYPE = "EpisodeOfCare.diagnosis";
 
 }

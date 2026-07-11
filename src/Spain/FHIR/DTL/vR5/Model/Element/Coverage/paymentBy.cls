@@ -8,12 +8,12 @@ Property responsibility As %String(MAXLEN = 1000000, XMLNAME = "responsibility",
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "paymentBy";
+Parameter XMLNAME = "Coverage.paymentBy";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "paymentBy";
+Parameter XMLTYPE = "Coverage.paymentBy";
 
 }

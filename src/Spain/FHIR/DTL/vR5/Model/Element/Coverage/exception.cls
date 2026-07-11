@@ -8,12 +8,12 @@ Property period As HS.FHIR.DTL.vR4.Model.Datatype.Period(XMLNAME = "period", XML
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "exception";
+Parameter XMLNAME = "Coverage.exception";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "exception";
+Parameter XMLTYPE = "Coverage.exception";
 
 }

@@ -22,12 +22,12 @@ Property section As list Of Spain.FHIR.DTL.vR5.Model.Element.Composition.section
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "section";
+Parameter XMLNAME = "Composition.section";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "section";
+Parameter XMLTYPE = "Composition.section";
 
 }

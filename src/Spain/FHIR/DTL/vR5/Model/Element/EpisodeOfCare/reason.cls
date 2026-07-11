@@ -8,12 +8,12 @@ Property value As list Of Spain.FHIR.DTL.vR5.Model.Datatype.CodeableReference(XM
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "reason";
+Parameter XMLNAME = "EpisodeOfCare.reason";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "reason";
+Parameter XMLTYPE = "EpisodeOfCare.reason";
 
 }

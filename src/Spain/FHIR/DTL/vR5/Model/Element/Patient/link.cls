@@ -8,12 +8,12 @@ Property type As %String(MAXLEN = 1000000, XMLNAME = "type", XMLPROJECTION = "AT
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "link";
+Parameter XMLNAME = "Patient.link";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "link";
+Parameter XMLTYPE = "Patient.link";
 
 }

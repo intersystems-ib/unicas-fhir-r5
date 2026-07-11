@@ -8,12 +8,12 @@ Property url As %String(MAXLEN = 1000000, XMLNAME = "url", XMLPROJECTION = "ATTR
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "policyBasis";
+Parameter XMLNAME = "Consent.policyBasis";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "policyBasis";
+Parameter XMLTYPE = "Consent.policyBasis";
 
 }

@@ -28,12 +28,12 @@ Property provision As list Of Spain.FHIR.DTL.vR5.Model.Element.Consent.provision
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "provision";
+Parameter XMLNAME = "Consent.provision";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "provision";
+Parameter XMLTYPE = "Consent.provision";
 
 }

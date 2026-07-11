@@ -10,12 +10,12 @@ Property specimenQuantity As HS.FHIR.DTL.vR4.Model.Datatype.Quantity(XMLNAME = "
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "container";
+Parameter XMLNAME = "Specimen.container";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "container";
+Parameter XMLTYPE = "Specimen.container";
 
 }

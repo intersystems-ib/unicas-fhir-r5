@@ -10,12 +10,12 @@ Property plannedActivityReference As HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAM
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "activity";
+Parameter XMLNAME = "CarePlan.activity";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "activity";
+Parameter XMLTYPE = "CarePlan.activity";
 
 }

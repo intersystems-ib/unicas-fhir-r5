@@ -8,12 +8,12 @@ Property description As %String(MAXLEN = 1000000, XMLNAME = "description", XMLPR
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "feature";
+Parameter XMLNAME = "Specimen.feature";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "feature";
+Parameter XMLTYPE = "Specimen.feature";
 
 }

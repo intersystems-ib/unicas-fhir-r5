@@ -10,12 +10,12 @@ Property recipient As list Of HS.FHIR.DTL.vR4.Model.Base.Reference(XMLNAME = "re
 
 Parameter ELEMENTQUALIFIED = 1;
 
-Parameter XMLNAME = "restriction";
+Parameter XMLNAME = "Task.restriction";
 
 Parameter XMLPROJECTION = "ELEMENT";
 
 Parameter XMLSEQUENCE = 1;
 
-Parameter XMLTYPE = "restriction";
+Parameter XMLTYPE = "Task.restriction";
 
 }
